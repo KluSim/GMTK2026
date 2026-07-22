@@ -1,2 +1,4 @@
-res://time.gd
-res://scripts/node_2d.tscn
+res://main.tscn
+res://clickedonme.gd
+res://outline.gdshader
+res://scripts/peopls.gd
