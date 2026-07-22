@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cooq1incaqrxn"
-path="res://.godot/imported/doodle-flat-clipart-wicker-basket_653461-2220-723427974.jpg-92025fd962d22bf91d6f7bab0877b76c.ctex"
+uid="uid://bmhlt3idngvoj"
+path="res://.godot/imported/basket.png-0810b2e8cd5c793e1620075edab09d4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asssets/doodle-flat-clipart-wicker-basket_653461-2220-723427974.jpg"
-dest_files=["res://.godot/imported/doodle-flat-clipart-wicker-basket_653461-2220-723427974.jpg-92025fd962d22bf91d6f7bab0877b76c.ctex"]
+source_file="res://asssets/basket.png"
+dest_files=["res://.godot/imported/basket.png-0810b2e8cd5c793e1620075edab09d4b.ctex"]
 
 [params]
 
