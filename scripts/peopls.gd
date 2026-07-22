@@ -77,6 +77,12 @@ class StoneProps:
 	var glitzern: bool = false
 	var shape: StoneShape
 	var fancyness: float
+	
+	func _init(col, glit, sh, fancy):
+		color = col
+		glitzern = glit
+		shape = sh
+		fancyness = fancy
 
 class Dist:
 	var dist: float

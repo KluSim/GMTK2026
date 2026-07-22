@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dr6utswk1rs5j"]
+
+[ext_resource type="Script" uid="uid://kngtr4g430ua" path="res://asssets/stone.gd" id="1_0ovdc"]
+
+[node name="Stonetemplate" type="Node2D" unique_id=2130042310]
+script = ExtResource("1_0ovdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548106172]
