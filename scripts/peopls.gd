@@ -163,7 +163,7 @@ var customer_schedule = [
 		Customer.new(1.0, 0.3,DesireProps.new(StoneColor.Black, GlitzerDesire.IDC, StoneShape.Rough)),
 		Customer.new(0.5, 0.3,DesireProps.new(StoneColor.Grey, GlitzerDesire.IDC, StoneShape.Rough)),
 		Customer.new(0.3, 0.3,DesireProps.new(StoneColor.Grey, GlitzerDesire.IDC, StoneShape.Smooth)),
-		Customer.new(0.5, 0.3,DesireProps.new(StoneColor.Black, GlitzerDesire.IDC, StoneShape.Rough)),
+		Customer.new(0.5, 0.3,DesireProps.new(StoneColor.Black, GlitzerDesire.Glitzer, StoneShape.Rough)),
 		Customer.new(0.1, 0.3,DesireProps.new(StoneColor.Grey, GlitzerDesire.IDC, StoneShape.Spikey))
 	]
 ]

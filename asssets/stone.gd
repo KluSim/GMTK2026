@@ -1,32 +1,37 @@
-@tool # 1. Added this to make the script run in the editor
+@tool
 extends Node2D
 
 const Classes = preload("res://scripts/peopls.gd")
 
-# 2. Added a setter to update the sprite texture when changed in inspector
 @export var image: Texture2D:
 	set(value):
 		image = value
-		if is_node_ready(): # Prevents errors before the node is fully loaded
+		# Only update if the node structure is loaded
+		if is_inside_tree() and has_node("Sprite2D"):
 			$Sprite2D.texture = value
 
-#@export var stonepros: Classes.StoneProps
-@export var color: Dictionary[Color, float] = {}
-@export var glitzern: bool = false
+# Initialize defaults carefully so they do not overwrite saved inspector data
+
+@export var glitzern: bool
 @export var fancyness: float
 @export var shape: Classes.StoneShape
+@export var colors: Array[Color]
+@export var weights: Array[float]
 
 @onready var sprite = $Sprite2D
-
 var stoneprops: Classes.StoneProps
 
 func _ready() -> void:
-	# 3. Guard clause to prevent running game logic inside the editor
+	# Always set the visual texture in the editor when loading the scene
+	if sprite and image:
+		sprite.texture = image
+		
+	# STOP HERE if we are just viewing this in the editor
 	if Engine.is_editor_hint():
-		# Update the texture once when the scene opens in the editor
-		if sprite and image:
-			sprite.texture = image
 		return 
+	var color_dict = {}
 
-	stoneprops = Classes.StoneProps.new(color, glitzern, shape, fancyness)
-	sprite.texture = image
+	for i in colors.size():
+		color_dict[colors[i]] = weights[i]
+	# Real gameplay initialization runs ONLY when playing the game
+	stoneprops = Classes.StoneProps.new(color_dict, glitzern, shape, fancyness)

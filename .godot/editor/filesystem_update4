@@ -1,8 +1,2 @@
-res://main.tscn
-res://clickedonme.gd
-res://outline.gdshader
-res://scripts/peopls.gd
-res://time.gd
-res://asssets/stonetemplate.tscn
-res://asssets/stone.gd
 res://asssets/allstones.tscn
+res://asssets/stone.gd
