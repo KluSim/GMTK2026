@@ -1,10 +1,540 @@
 [gd_scene format=3 uid="uid://dx6qm1wiwii40"]
 
 [ext_resource type="PackedScene" uid="uid://dr6utswk1rs5j" path="res://asssets/stonetemplate.tscn" id="1_ase47"]
+[ext_resource type="Texture2D" uid="uid://cbj1cocj2obhe" path="res://asssets/stones/Amethyst2.png" id="2_mwxo0"]
+[ext_resource type="Script" uid="uid://dc2fynm1xyguu" path="res://asssets/material.gd" id="3_8hss3"]
+[ext_resource type="Texture2D" uid="uid://ccr6fgbdxgigx" path="res://asssets/stones/Amethyst.png" id="3_mwxo0"]
+[ext_resource type="Texture2D" uid="uid://dc5le37etfkqe" path="res://asssets/stones/Azurite.png" id="4_4wrk8"]
+[ext_resource type="Texture2D" uid="uid://dl01ipvh2e3ai" path="res://asssets/stones/Baryte2.png" id="5_aa3h0"]
+[ext_resource type="Texture2D" uid="uid://35ml1xre3tt8" path="res://asssets/stones/Baryte3.png" id="6_74uvt"]
+[ext_resource type="Texture2D" uid="uid://dl0glcgxvxwgc" path="res://asssets/stones/Baryte.png" id="7_wa855"]
+[ext_resource type="Texture2D" uid="uid://dgjhxr8wws2ry" path="res://asssets/stones/BaryteRealgar2.png" id="8_lx1em"]
+[ext_resource type="Texture2D" uid="uid://cqlr6shgxpthu" path="res://asssets/stones/BaryteRealgar.png" id="9_ljrb7"]
+[ext_resource type="Texture2D" uid="uid://cchquniwn8l07" path="res://asssets/stones/Boulangerite.png" id="11_74uvt"]
+[ext_resource type="Texture2D" uid="uid://d1rkfp5kpr18b" path="res://asssets/stones/BoulderOpal.png" id="12_ayu48"]
+[ext_resource type="Texture2D" uid="uid://c168r8i7wxthn" path="res://asssets/stones/CalciteBoulangerite.png" id="13_fs1pj"]
+[ext_resource type="Texture2D" uid="uid://b4tvwsr2jpgbc" path="res://asssets/stones/CalciteIronoxide.png" id="14_w1wg0"]
+[ext_resource type="Texture2D" uid="uid://ch3ro3cq7j8d2" path="res://asssets/stones/CalcitePyrite.png" id="15_5er8u"]
+[ext_resource type="Texture2D" uid="uid://vbt3hn1yd53u" path="res://asssets/stones/CalciteSeptaria.png" id="16_l3yhw"]
+[ext_resource type="Texture2D" uid="uid://dfofkq40kwht3" path="res://asssets/stones/Chalcopyrite.png" id="17_d1uqx"]
+[ext_resource type="Texture2D" uid="uid://qtokp4mmvl2t" path="res://asssets/stones/CopperSilver.png" id="18_imokk"]
+[ext_resource type="Texture2D" uid="uid://dl7pqni8e3ld6" path="res://asssets/stones/Dolomite.png" id="19_dtkai"]
+[ext_resource type="Texture2D" uid="uid://dd4txhhuqsm6e" path="res://asssets/stones/DolomiteCalciteQuartz.png" id="20_esjeo"]
+[ext_resource type="Texture2D" uid="uid://djt0758smo04q" path="res://asssets/stones/Fluorite.png" id="21_2l5rc"]
+[ext_resource type="Texture2D" uid="uid://dmoa1msjs8b21" path="res://asssets/stones/Gold.png" id="22_tdhii"]
+[ext_resource type="Texture2D" uid="uid://cv5l7ebfjkdr8" path="res://asssets/stones/Hematite.png" id="23_2uriv"]
+[ext_resource type="Texture2D" uid="uid://b0rpivpi7sj6p" path="res://asssets/stones/Malachite.png" id="24_8anc6"]
+[ext_resource type="Texture2D" uid="uid://b1ep6eebfn0gp" path="res://asssets/stones/Nagyagite.png" id="25_rfnwg"]
+[ext_resource type="Texture2D" uid="uid://bbjdhdoev4w00" path="res://asssets/stones/Offretite.png" id="26_m3bb7"]
+[ext_resource type="Texture2D" uid="uid://cvi0v3iwea4vh" path="res://asssets/stones/Pyrite2.png" id="27_tgmwd"]
+[ext_resource type="Texture2D" uid="uid://dwfad1rksu8dl" path="res://asssets/stones/Pyrite.png" id="28_5it8s"]
+[ext_resource type="Texture2D" uid="uid://1nac0hwnxojn" path="res://asssets/stones/Pyromorphite.png" id="29_fl4xa"]
+[ext_resource type="Texture2D" uid="uid://dm8mcsv8nr5eg" path="res://asssets/stones/QuartzChalcopyriteGalena.png" id="30_ij71v"]
+[ext_resource type="Texture2D" uid="uid://cl0pfu5uld6e4" path="res://asssets/stones/Rhodochrosite2.png" id="31_msnmq"]
+[ext_resource type="Texture2D" uid="uid://dfc8jysvfbtid" path="res://asssets/stones/Rhodochrosite.png" id="32_0ubi6"]
+[ext_resource type="Texture2D" uid="uid://cuhggsqtaj7dr" path="res://asssets/stones/RhodochrositeAlabandite.png" id="33_pbqhe"]
+[ext_resource type="Texture2D" uid="uid://8l3vxfdsodl3" path="res://asssets/stones/RhodochrositeAmethyst.png" id="34_6j03s"]
+[ext_resource type="Texture2D" uid="uid://bl3fvgmf5rc7l" path="res://asssets/stones/RhodochrositeBaryteQuartz.png" id="35_3r1s3"]
+[ext_resource type="Texture2D" uid="uid://bog81kctn4d2a" path="res://asssets/stones/Rhodonite.png" id="36_ikfab"]
+[ext_resource type="Texture2D" uid="uid://c0p64myyg0j0e" path="res://asssets/stones/Scheelite.png" id="37_r3s51"]
+[ext_resource type="Texture2D" uid="uid://c8obrhtkf4bhq" path="res://asssets/stones/Siderite.png" id="38_onxo0"]
+[ext_resource type="Texture2D" uid="uid://ddx7xlw1qxrbf" path="res://asssets/stones/Tetradymite.png" id="39_5ly67"]
+[ext_resource type="Texture2D" uid="uid://okiusloe3npt" path="res://asssets/stones/Variscite.png" id="40_o2kdu"]
+
+[sub_resource type="Resource" id="Resource_dfwin"]
+script = ExtResource("3_8hss3")
+color = Color(0.5568628, 0.44313726, 0.6509804, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_8hss3"]
+script = ExtResource("3_8hss3")
+color = Color(0.2784314, 0.22745098, 0.32941177, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_d4pis"]
+script = ExtResource("3_8hss3")
+color = Color(0.19607843, 0.13333334, 0.34901962, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_4tp0c"]
+script = ExtResource("3_8hss3")
+color = Color(0.8862745, 0.67058825, 0.2, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_4wrk8"]
+script = ExtResource("3_8hss3")
+color = Color(0.58431375, 0.42745098, 0.36078432, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_aa3h0"]
+script = ExtResource("3_8hss3")
+color = Color(0.6, 0.41568628, 0.12941177, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_74uvt"]
+script = ExtResource("3_8hss3")
+color = Color(0.8352941, 0.3254902, 0.15294118, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_wa855"]
+script = ExtResource("3_8hss3")
+color = Color(0.53333336, 0.2, 0.09019608, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_lx1em"]
+script = ExtResource("3_8hss3")
+color = Color(0.2627451, 0.27450982, 0.28235295, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_ljrb7"]
+script = ExtResource("3_8hss3")
+color = Color(0.3372549, 0.6862745, 0.7019608, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_64mth"]
+script = ExtResource("3_8hss3")
+color = Color(0.38431373, 0.38431373, 0.38431373, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_cv4na"]
+script = ExtResource("3_8hss3")
+color = Color(0.6862745, 0.33333334, 0.14901961, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_3xf0l"]
+script = ExtResource("3_8hss3")
+color = Color(0.7882353, 0.75686276, 0.78431374, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_v5oke"]
+script = ExtResource("3_8hss3")
+color = Color(0.48235294, 0.4117647, 0.27450982, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_kbk7o"]
+script = ExtResource("3_8hss3")
+color = Color(0.53333336, 0.53333336, 0.7294118, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_3mkco"]
+script = ExtResource("3_8hss3")
+color = Color(0.6, 0.5411765, 0.4745098, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_2sn85"]
+script = ExtResource("3_8hss3")
+color = Color(0.7529412, 0.67058825, 0.54509807, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_nc8iy"]
+script = ExtResource("3_8hss3")
+color = Color(0.72156864, 0.5921569, 0.40784314, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_jklgt"]
+script = ExtResource("3_8hss3")
+color = Color(0.3254902, 0.5372549, 0.5019608, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_regt2"]
+script = ExtResource("3_8hss3")
+color = Color(0.69803923, 0.6745098, 0.59607846, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_h1k4i"]
+script = ExtResource("3_8hss3")
+color = Color(0.6117647, 0.4, 0.4117647, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_am0ri"]
+script = ExtResource("3_8hss3")
+color = Color(0.11764706, 0.61960787, 0.3764706, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_gnqbu"]
+script = ExtResource("3_8hss3")
+color = Color(0.3882353, 0.38039216, 0.3764706, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_ugfi4"]
+script = ExtResource("3_8hss3")
+color = Color(0.57254905, 0.5803922, 0.5137255, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_pnqig"]
+script = ExtResource("3_8hss3")
+color = Color(0.43529412, 0.5176471, 0.46666667, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_txset"]
+script = ExtResource("3_8hss3")
+color = Color(0.38039216, 0.38431373, 0.3372549, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_g2mfg"]
+script = ExtResource("3_8hss3")
+color = Color(0.7372549, 0.59607846, 0.2901961, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_5batt"]
+script = ExtResource("3_8hss3")
+color = Color(0.74509805, 0.69803923, 0.654902, 1)
+weight = 0.8
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_howdj"]
+script = ExtResource("3_8hss3")
+color = Color(0.35686275, 0.29411766, 0.21176471, 1)
+weight = 0.2
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_iql3x"]
+script = ExtResource("3_8hss3")
+color = Color(0.7019608, 0.43529412, 0.5647059, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_vb8jl"]
+script = ExtResource("3_8hss3")
+color = Color(0.5568628, 0.48235294, 0.44705883, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_xbh5o"]
+script = ExtResource("3_8hss3")
+color = Color(0.59607846, 0.39215687, 0.34901962, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_1l3ah"]
+script = ExtResource("3_8hss3")
+color = Color(0.7372549, 0.6039216, 0.7411765, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_6x4fg"]
+script = ExtResource("3_8hss3")
+color = Color(0.6313726, 0.3529412, 0.34509805, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_iklu8"]
+script = ExtResource("3_8hss3")
+color = Color(0.63529414, 0.101960786, 0.10980392, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_ayu48"]
+script = ExtResource("3_8hss3")
+color = Color(0.5294118, 0.50980395, 0.4509804, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_fs1pj"]
+script = ExtResource("3_8hss3")
+color = Color(0.38039216, 0.33333334, 0.18431373, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_w1wg0"]
+script = ExtResource("3_8hss3")
+color = Color(0.4862745, 0.41960785, 0.29411766, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_5er8u"]
+script = ExtResource("3_8hss3")
+color = Color(0.42352942, 0.53333336, 0.47058824, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
 
 [node name="Allstones" type="Node2D" unique_id=2138325891]
 
-[node name="Stonetemplate" parent="." unique_id=2130042310 instance=ExtResource("1_ase47")]
-position = Vector2(135, 400)
-colors = Array[Color]([Color(0.6693721, 0.5836783, 0.8848199, 1)])
-weights = Array[float]([0.88])
+[node name="Amethyst2" parent="." unique_id=2130042310 instance=ExtResource("1_ase47")]
+position = Vector2(211, 262)
+image = ExtResource("2_mwxo0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_dfwin")])
+glitzern = true
+fancyness = 0.8
+shape = 1
+
+[node name="Amethyst" parent="." unique_id=168288234 instance=ExtResource("1_ase47")]
+position = Vector2(511, 260)
+image = ExtResource("3_mwxo0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_8hss3")])
+glitzern = true
+fancyness = 0.9
+shape = 1
+
+[node name="Azurite" parent="." unique_id=8801767 instance=ExtResource("1_ase47")]
+position = Vector2(788, 280)
+image = ExtResource("4_4wrk8")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_d4pis")])
+fancyness = 0.7
+
+[node name="Baryte2" parent="." unique_id=330082798 instance=ExtResource("1_ase47")]
+position = Vector2(1076, 264)
+image = ExtResource("5_aa3h0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_4tp0c")])
+fancyness = 0.6
+shape = 2
+
+[node name="Baryte3" parent="." unique_id=54976900 instance=ExtResource("1_ase47")]
+position = Vector2(1348, 264)
+image = ExtResource("6_74uvt")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_4wrk8")])
+fancyness = 0.2
+shape = 2
+
+[node name="Baryte" parent="." unique_id=967995051 instance=ExtResource("1_ase47")]
+position = Vector2(1636, 268)
+image = ExtResource("7_wa855")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_aa3h0")])
+fancyness = 0.4
+shape = 2
+
+[node name="BaryteRealgar2" parent="." unique_id=639556557 instance=ExtResource("1_ase47")]
+position = Vector2(1910, 264)
+image = ExtResource("8_lx1em")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_74uvt")])
+fancyness = 0.6
+shape = 1
+
+[node name="BaryteRealgar" parent="." unique_id=1359564953 instance=ExtResource("1_ase47")]
+position = Vector2(2198, 280)
+image = ExtResource("9_ljrb7")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_wa855")])
+fancyness = 0.4
+shape = 1
+
+[node name="Boulangerite" parent="." unique_id=1180673470 instance=ExtResource("1_ase47")]
+position = Vector2(2458, 260)
+image = ExtResource("11_74uvt")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_lx1em")])
+fancyness = 0.2
+
+[node name="BoulderOpal" parent="." unique_id=571283563 instance=ExtResource("1_ase47")]
+position = Vector2(2774, 238)
+image = ExtResource("12_ayu48")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_ljrb7")])
+fancyness = 0.7
+shape = 1
+
+[node name="CalciteBoulangerite" parent="." unique_id=1899418379 instance=ExtResource("1_ase47")]
+position = Vector2(202, 596)
+image = ExtResource("13_fs1pj")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_64mth")])
+fancyness = 0.2
+
+[node name="CalciteIronoxide" parent="." unique_id=966431131 instance=ExtResource("1_ase47")]
+position = Vector2(530, 634)
+image = ExtResource("14_w1wg0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_cv4na")])
+fancyness = 0.2
+
+[node name="CalcitePyrite" parent="." unique_id=1501616144 instance=ExtResource("1_ase47")]
+position = Vector2(854, 638)
+image = ExtResource("15_5er8u")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_3xf0l")])
+glitzern = true
+fancyness = 0.3
+shape = 2
+
+[node name="CalciteSeptaria" parent="." unique_id=439352686 instance=ExtResource("1_ase47")]
+position = Vector2(1086, 640)
+image = ExtResource("16_l3yhw")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_v5oke")])
+fancyness = 0.4
+
+[node name="Chalcopyrite" parent="." unique_id=696673869 instance=ExtResource("1_ase47")]
+position = Vector2(1338, 630)
+image = ExtResource("17_d1uqx")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_kbk7o")])
+fancyness = 0.9
+
+[node name="CopperSilver" parent="." unique_id=671515537 instance=ExtResource("1_ase47")]
+position = Vector2(1606, 624)
+image = ExtResource("18_imokk")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_3mkco")])
+fancyness = 0.2
+shape = 1
+
+[node name="Dolomite" parent="." unique_id=403615621 instance=ExtResource("1_ase47")]
+position = Vector2(1876, 612)
+image = ExtResource("19_dtkai")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_2sn85")])
+fancyness = 0.3
+shape = 1
+
+[node name="DolomiteCalciteQuartz" parent="." unique_id=1726088851 instance=ExtResource("1_ase47")]
+position = Vector2(2186, 616)
+image = ExtResource("20_esjeo")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_nc8iy")])
+fancyness = 0.2
+shape = 1
+
+[node name="Fluorite" parent="." unique_id=534394001 instance=ExtResource("1_ase47")]
+position = Vector2(2488, 618)
+image = ExtResource("21_2l5rc")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_jklgt")])
+glitzern = true
+fancyness = 0.6
+shape = 1
+
+[node name="Gold" parent="." unique_id=141276158 instance=ExtResource("1_ase47")]
+position = Vector2(2752, 642)
+image = ExtResource("22_tdhii")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_regt2")])
+fancyness = 0.2
+shape = 1
+
+[node name="Hematite" parent="." unique_id=519499781 instance=ExtResource("1_ase47")]
+position = Vector2(184, 913)
+image = ExtResource("23_2uriv")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_h1k4i")])
+fancyness = 0.5
+shape = 1
+
+[node name="Malachite" parent="." unique_id=1071531440 instance=ExtResource("1_ase47")]
+position = Vector2(499, 927)
+image = ExtResource("24_8anc6")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_am0ri")])
+glitzern = true
+fancyness = 0.95
+
+[node name="Nagyagite" parent="." unique_id=676517779 instance=ExtResource("1_ase47")]
+position = Vector2(788, 942)
+image = ExtResource("25_rfnwg")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_gnqbu")])
+fancyness = 0.2
+shape = 1
+
+[node name="Offretite" parent="." unique_id=69124228 instance=ExtResource("1_ase47")]
+position = Vector2(1085, 963)
+image = ExtResource("26_m3bb7")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_ugfi4")])
+fancyness = 0.4
+
+[node name="Pyrite2" parent="." unique_id=1486119462 instance=ExtResource("1_ase47")]
+position = Vector2(1343, 959)
+image = ExtResource("27_tgmwd")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_pnqig")])
+fancyness = 0.5
+
+[node name="Pyrite" parent="." unique_id=115669508 instance=ExtResource("1_ase47")]
+position = Vector2(1599, 965)
+image = ExtResource("28_5it8s")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_txset")])
+fancyness = 0.3
+
+[node name="Pyromorphite" parent="." unique_id=1881019603 instance=ExtResource("1_ase47")]
+position = Vector2(1854, 968)
+image = ExtResource("29_fl4xa")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_g2mfg")])
+fancyness = 0.6
+shape = 1
+
+[node name="QuatzChalcopyriteGalena" parent="." unique_id=1741470174 instance=ExtResource("1_ase47")]
+position = Vector2(2150, 957)
+image = ExtResource("30_ij71v")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_5batt"), SubResource("Resource_howdj")])
+glitzern = true
+fancyness = 0.4
+shape = 2
+
+[node name="Rhodochrosite2" parent="." unique_id=87476358 instance=ExtResource("1_ase47")]
+position = Vector2(2431, 960)
+image = ExtResource("31_msnmq")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_iql3x")])
+glitzern = true
+fancyness = 0.7
+
+[node name="Rhodochrosite" parent="." unique_id=1426682713 instance=ExtResource("1_ase47")]
+position = Vector2(2693, 954)
+image = ExtResource("32_0ubi6")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_vb8jl")])
+fancyness = 0.4
+shape = 1
+
+[node name="RhodochrositeAlbandite" parent="." unique_id=667967140 instance=ExtResource("1_ase47")]
+position = Vector2(222, 1256)
+image = ExtResource("33_pbqhe")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_xbh5o")])
+fancyness = 0.4
+shape = 2
+
+[node name="RhodochrositeAmethyst" parent="." unique_id=1851234990 instance=ExtResource("1_ase47")]
+position = Vector2(521, 1241)
+image = ExtResource("34_6j03s")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_1l3ah")])
+fancyness = 0.9
+shape = 1
+
+[node name="RhodochrositeBaryteQuartz" parent="." unique_id=2095338803 instance=ExtResource("1_ase47")]
+position = Vector2(832, 1233)
+image = ExtResource("35_3r1s3")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_6x4fg")])
+fancyness = 0.6
+shape = 1
+
+[node name="Rhodonite" parent="." unique_id=735315608 instance=ExtResource("1_ase47")]
+position = Vector2(1126, 1225)
+image = ExtResource("36_ikfab")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_iklu8")])
+glitzern = true
+fancyness = 1.0
+shape = 2
+
+[node name="Scheelite" parent="." unique_id=972384252 instance=ExtResource("1_ase47")]
+position = Vector2(1422, 1230)
+image = ExtResource("37_r3s51")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_ayu48")])
+fancyness = 0.3
+shape = 2
+
+[node name="Siderite" parent="." unique_id=1943581363 instance=ExtResource("1_ase47")]
+position = Vector2(1721, 1244)
+image = ExtResource("38_onxo0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_fs1pj")])
+fancyness = 0.5
+shape = 1
+
+[node name="Tetradymite" parent="." unique_id=926883990 instance=ExtResource("1_ase47")]
+position = Vector2(2020, 1258)
+image = ExtResource("39_5ly67")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_w1wg0")])
+fancyness = 0.3
+shape = 2
+
+[node name="Variscite" parent="." unique_id=444105559 instance=ExtResource("1_ase47")]
+position = Vector2(2291, 1248)
+image = ExtResource("40_o2kdu")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_5er8u")])
+fancyness = 0.6

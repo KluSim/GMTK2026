@@ -12,11 +12,11 @@ const Classes = preload("res://scripts/peopls.gd")
 
 # Initialize defaults carefully so they do not overwrite saved inspector data
 
+@export var mats: Array[StoneMaterial] = []
+
 @export var glitzern: bool
 @export var fancyness: float
 @export var shape: Classes.StoneShape
-@export var colors: Array[Color]
-@export var weights: Array[float]
 
 @onready var sprite = $Sprite2D
 var stoneprops: Classes.StoneProps
@@ -31,7 +31,7 @@ func _ready() -> void:
 		return 
 	var color_dict = {}
 
-	for i in colors.size():
-		color_dict[colors[i]] = weights[i]
+	for i in mats.size():
+		color_dict[mats[i].color] = mats[i].weight
 	# Real gameplay initialization runs ONLY when playing the game
 	stoneprops = Classes.StoneProps.new(color_dict, glitzern, shape, fancyness)
