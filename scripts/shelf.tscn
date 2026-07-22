@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bwylko58cpf3f"]
+
+[ext_resource type="Texture2D" uid="uid://bi3l58unqo8di" path="res://asssets/wood-texture-background-free-photo-2149788610.jpg" id="1_7g88j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haftu"]
+size = Vector2(521.9903, 273.55682)
+
+[node name="Shelf" type="Node2D" unique_id=518753474]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=617068901]
+scale = Vector2(0.7988282, 0.06850447)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=371233870]
+position = Vector2(-2.5158691, -6.072754)
+shape = SubResource("RectangleShape2D_haftu")
+
+[node name="shelf4" type="Sprite2D" parent="." unique_id=1817853873]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+scale = Vector2(0.7988282, -0.05149561)
+texture = ExtResource("1_7g88j")

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbdcgyifuhmm0"]
 
+[ext_resource type="PackedScene" uid="uid://bwylko58cpf3f" path="res://scripts/shelf.tscn" id="1_8yxic"]
 [ext_resource type="Texture2D" uid="uid://dnq1yor37ofxf" path="res://asssets/wood-texture-background-free-photo-2149788610.jpg" id="1_ue2ak"]
 [ext_resource type="Script" uid="uid://bhw5ukgtg1elf" path="res://time.gd" id="2_2upi6"]
 [ext_resource type="Texture2D" uid="uid://bmhlt3idngvoj" path="res://asssets/basket.png" id="2_plxss"]
@@ -7,17 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="5_4i1vo"]
 [ext_resource type="Script" uid="uid://6m6lekawh24w" path="res://scripts/drag_drop_stones.gd" id="5_dlxbr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvteh"]
-size = Vector2(2930.3396, 977.38525)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
 radius = 608.08
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4i1vo"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_phfuf"]
 load_path = "res://.godot/imported/wood-texture-background-free-photo-2149788610.jpg-d2a69cea59226b767b0c5d4c7a1383ee.ctex"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlxbr"]
-size = Vector2(15522.853, 191.70007)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haftu"]
+size = Vector2(3416.5, 2977)
 
 [sub_resource type="Gradient" id="Gradient_plxss"]
 offsets = PackedFloat32Array(0.012048192, 0.9939759)
@@ -34,7 +32,8 @@ fill_to = Vector2(100, 0)
 generate_mipmaps = false
 noise = SubResource("FastNoiseLite_fuano")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_haftu"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fuano"]
+radius = 47.095646
 
 [node name="Node2D" type="Node2D" unique_id=2052885503]
 
@@ -47,69 +46,30 @@ anchor_mode = 0
 
 [node name="leftshelf" type="Node2D" parent="visuals/shop visuals" unique_id=231686816]
 
-[node name="shelf4" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1702185425]
-modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(216, 531)
-scale = Vector2(0.15260646, 0.014323931)
-texture = ExtResource("1_ue2ak")
+[node name="Shelf" parent="visuals/shop visuals/leftshelf" unique_id=518753474 instance=ExtResource("1_8yxic")]
+position = Vector2(204, 132)
+scale = Vector2(0.9852941, 0.9259549)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/shelf4" unique_id=1725939992]
+[node name="Shelf2" parent="visuals/shop visuals/leftshelf" unique_id=1407536572 instance=ExtResource("1_8yxic")]
+position = Vector2(212, 514)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/shelf4/StaticBody2D" unique_id=1432877483]
-position = Vector2(17.486572, 698.13086)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_hvteh")
+[node name="Shelf3" parent="visuals/shop visuals/leftshelf" unique_id=261444589 instance=ExtResource("1_8yxic")]
+position = Vector2(209, 389)
 
-[node name="shelf1" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=327490978]
-modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(219.33148, 143.00003)
-scale = Vector2(0.15260646, 0.014323931)
-texture = ExtResource("1_ue2ak")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/shelf1" unique_id=926661386]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/shelf1/StaticBody2D" unique_id=335561389]
-position = Vector2(17.486572, 698.13086)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_hvteh")
-
-[node name="shelf2" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=853436347]
-modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(217.99998, 280)
-scale = Vector2(0.15260646, 0.014323931)
-texture = ExtResource("1_ue2ak")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/shelf2" unique_id=1059936359]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/shelf2/StaticBody2D" unique_id=810511605]
-position = Vector2(17.486572, 698.13086)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_hvteh")
-
-[node name="shelf3" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=618302762]
-modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(218, 408.00003)
-scale = Vector2(0.15260646, 0.014323931)
-texture = ExtResource("1_ue2ak")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/shelf3" unique_id=725461281]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/shelf3/StaticBody2D" unique_id=979327368]
-position = Vector2(17.486572, 698.13086)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_hvteh")
+[node name="Shelf4" parent="visuals/shop visuals/leftshelf" unique_id=1187441990 instance=ExtResource("1_8yxic")]
+position = Vector2(206, 260)
 
 [node name="top shelf" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1715682454]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(217.99998, 14.000008)
-scale = Vector2(0.15260646, 0.014323931)
+position = Vector2(117.99999, -57.999992)
+scale = Vector2(1.1440153, 0.58887744)
 texture = ExtResource("1_ue2ak")
 
 [node name="back_shelf" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1989455733]
 modulate = Color(0.17283267, 0.17283267, 0.17283261, 1)
 z_index = -1
-position = Vector2(209, 327)
-scale = Vector2(0.15260646, 0.32552928)
+position = Vector2(138, 368.00003)
+scale = Vector2(1.1126064, 2.1655295)
 texture = ExtResource("1_ue2ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1337986226]
@@ -132,58 +92,86 @@ shape = SubResource("CircleShape2D_hvteh")
 
 [node name="Counter" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1497199078]
 modulate = Color(0.19793725, 0.19793725, 0.19793719, 1)
-position = Vector2(680, 564)
-scale = Vector2(0.1612245, 0.082653075)
-texture = ExtResource("1_ue2ak")
+z_index = -2
+position = Vector2(683.5, 584)
+scale = Vector2(1.0136719, 0.43401748)
+texture = SubResource("CompressedTexture2D_phfuf")
 
 [node name="leftBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1803645708]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(428.52, 326.39233)
+z_index = 1
+position = Vector2(423.02, 327.39236)
 rotation = 1.5707964
-scale = Vector2(0.22630134, 0.014323931)
+scale = Vector2(1.2809889, 0.06417751)
 texture = ExtResource("1_ue2ak")
 
-[node name="rightBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1344640924]
+[node name="leftBeam2" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1466650742]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(933.00006, 323.99997)
+position = Vector2(9.9999695, 327)
 rotation = 1.5707964
-scale = Vector2(0.2282933, 0.014323931)
-texture = SubResource("CompressedTexture2D_4i1vo")
-
-[node name="counter_shelf" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=478972987]
-modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(681.8342, 498.00006)
-scale = Vector2(0.17970458, 0.014323931)
+scale = Vector2(1.2809889, 0.06417751)
 texture = ExtResource("1_ue2ak")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/counter/counter_shelf" unique_id=1441069912]
+[node name="Shelf" parent="visuals/shop visuals/counter" unique_id=66084596 instance=ExtResource("1_8yxic")]
+position = Vector2(672, 518)
+scale = Vector2(1.25, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/counter/counter_shelf/StaticBody2D" unique_id=317781904]
-position = Vector2(17.486572, 698.13086)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_hvteh")
+[node name="rightBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=871563762]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+position = Vector2(935, 320)
+rotation = 1.5707964
+scale = Vector2(1.2809889, 0.06417751)
+texture = ExtResource("1_ue2ak")
+
+[node name="rightBeam2" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1606253565]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+position = Vector2(1150, 316.99997)
+rotation = 1.5707964
+scale = Vector2(1.2809889, 0.06417751)
+texture = ExtResource("1_ue2ak")
 
 [node name="rightshelf" type="Node2D" parent="visuals/shop visuals" unique_id=635050520]
 
 [node name="back_shelf" type="Sprite2D" parent="visuals/shop visuals/rightshelf" unique_id=900233577]
 modulate = Color(0.17283267, 0.17283267, 0.17283261, 1)
 z_index = -1
-position = Vector2(1041.3342, 324.99063)
-scale = Vector2(0.075282834, 0.33062178)
+position = Vector2(1057, 320)
+scale = Vector2(0.4609377, 1.9472141)
 texture = ExtResource("1_ue2ak")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/rightshelf/back_shelf" unique_id=14003745]
+[node name="edges" type="Node2D" parent="visuals/shop visuals" unique_id=2052065939]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/rightshelf/back_shelf/StaticBody2D" unique_id=1817421992]
-position = Vector2(-6296.6826, 1090.9729)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_dlxbr")
+[node name="Area2D" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=674923978]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D" unique_id=236485617]
+position = Vector2(-1696.75, 173.5)
+shape = SubResource("RectangleShape2D_haftu")
+
+[node name="Area2D2" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=1972545744]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D2" unique_id=268628755]
+position = Vector2(601, -1698)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_haftu")
+
+[node name="Area2D3" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=623839272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D3" unique_id=416100110]
+position = Vector2(605, 2360)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_haftu")
+
+[node name="Area2D4" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=1553328053]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D4" unique_id=953726644]
+position = Vector2(2869, 327)
+shape = SubResource("RectangleShape2D_haftu")
 
 [node name="outside" type="Node2D" parent="." unique_id=1693418478]
 script = ExtResource("2_2upi6")
 
 [node name="sky" type="Sprite2D" parent="outside" unique_id=1536825513]
-z_index = -5
+z_index = -2
 position = Vector2(694.00006, 253)
 scale = Vector2(8.390625, 7.9375)
 texture = SubResource("GradientTexture2D_hvteh")
@@ -194,11 +182,12 @@ position = Vector2(684, 278)
 texture = SubResource("NoiseTexture2D_haftu")
 
 [node name="test_ball" type="RigidBody2D" parent="." unique_id=1491297971]
+position = Vector2(675, 395)
+input_pickable = true
 script = ExtResource("5_dlxbr")
 
 [node name="Sprite2D" type="Sprite2D" parent="test_ball" unique_id=1326390200]
-position = Vector2(603, 381)
 texture = ExtResource("5_4i1vo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test_ball" unique_id=753604821]
-shape = SubResource("CircleShape2D_haftu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_ball" unique_id=1572453387]
+shape = SubResource("CircleShape2D_fuano")
