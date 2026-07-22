@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dbdcgyifuhmm0"]
+
+[ext_resource type="Texture2D" uid="uid://dnq1yor37ofxf" path="res://asssets/wood-texture-background-free-photo-2149788610.jpg" id="1_ue2ak"]
+[ext_resource type="Script" uid="uid://bhw5ukgtg1elf" path="res://time.gd" id="2_2upi6"]
+
+[sub_resource type="Gradient" id="Gradient_plxss"]
+offsets = PackedFloat32Array(0.4939759, 0.9879518, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hvteh"]
+gradient = SubResource("Gradient_plxss")
+
+[node name="Node2D" type="Node2D" unique_id=2052885503]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2123865021]
+anchor_mode = 0
+
+[node name="visuals" type="Node2D" parent="." unique_id=124859489]
+
+[node name="shop visuals" type="Node2D" parent="visuals" unique_id=822069762]
+
+[node name="Counter" type="Sprite2D" parent="visuals/shop visuals" unique_id=1497199078]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+position = Vector2(680, 564)
+scale = Vector2(0.1612245, 0.082653075)
+texture = ExtResource("1_ue2ak")
+
+[node name="leftBeam" type="Sprite2D" parent="visuals/shop visuals" unique_id=1803645708]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+position = Vector2(428.52, 322.00003)
+rotation = 1.5707964
+scale = Vector2(0.21833342, 0.014323931)
+texture = ExtResource("1_ue2ak")
+
+[node name="rightBeam" type="Sprite2D" parent="visuals/shop visuals" unique_id=1344640924]
+modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
+position = Vector2(933.00006, 324)
+rotation = 1.5707964
+scale = Vector2(0.21833342, 0.014323931)
+texture = ExtResource("1_ue2ak")
+
+[node name="outside" type="Node2D" parent="." unique_id=1693418478]
+script = ExtResource("2_2upi6")
+
+[node name="sky" type="Sprite2D" parent="outside" unique_id=1536825513]
+z_index = -1
+position = Vector2(682.5, 257)
+scale = Vector2(8.390625, 7.9375)
+texture = SubResource("GradientTexture2D_hvteh")
