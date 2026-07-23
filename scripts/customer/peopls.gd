@@ -20,10 +20,13 @@ static func offer(
 	reputation: float
 ) -> bool:
 	var dist = customer.request.stone_distance(stone)
-	var goodenough = dist < customer.pickyness
+	dist = 1000
+	var goodenough = dist < customer.picky
 	if not goodenough:
+		print("häää")
 		return false
-	var prize = stone.fancy * reputation * max(min(-0.4*dist.dist, 1),0)
+	print(stone.fancy, reputation)
+	var prize = stone.fancy * reputation * max(min(-0.4*+1.5, 1),0.1)
 	return prize
 
 static func generate_customer() -> CustomerResource:

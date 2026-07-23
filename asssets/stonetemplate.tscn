@@ -1,14 +1,8 @@
 [gd_scene format=3 uid="uid://dr6utswk1rs5j"]
 
-[ext_resource type="Script" uid="uid://kngtr4g430ua" path="res://scripts/stone/resource/stone.gd" id="1_0ovdc"]
-[ext_resource type="Script" path="res://scripts/stone/resource/material.gd" id="2_od77v"]
-
-[sub_resource type="Resource" id="Resource_dfwin"]
-script = ExtResource("2_od77v")
-metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+[ext_resource type="Script" uid="uid://kngtr4g430ua" path="res://scripts/stone/stone.gd" id="1_0ovdc"]
 
 [node name="Stonetemplate" type="Node2D" unique_id=2130042310]
 script = ExtResource("1_0ovdc")
-mats = Array[ExtResource("2_od77v")]([SubResource("Resource_dfwin")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548106172]

@@ -4,7 +4,7 @@ extends Node2D
 @export var stone: StoneResource:
 	set(value):
 		stone = value
-		if value.image:
+		if value.image and sprite:
 			sprite.texture = value.image
 @onready var sprite = $Sprite2D
 

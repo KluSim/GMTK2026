@@ -48,7 +48,11 @@ func stone_distance(stone: StoneResource) -> float:
 		for material in stone.materials:
 			color_distance *= color_distance(get_stone_color(color_req), material.color)
 		color_distances.append(color_distance)
-	dist += min(color_distance)
+	var lowest  = 10000
+	for c in color_distances:
+		if lowest > c:
+			lowest = c
+	dist += lowest
 	return dist
 
 static func get_stone_color(stonecolor: SColor) -> Color:
