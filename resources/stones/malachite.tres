@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://dt1or0eojqgvy"]
+
+[ext_resource type="Texture2D" uid="uid://b0rpivpi7sj6p" path="res://asssets/stones/Malachite.png" id="1_5fhjr"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_v0des"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_fhpow"]
+
+[sub_resource type="Resource" id="Resource_4v0ji"]
+script = ExtResource("2_v0des")
+color = Color(0.15686275, 0.6313726, 0.4, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_fhpow")
+image = ExtResource("1_5fhjr")
+materials = Array[ExtResource("2_v0des")]([SubResource("Resource_4v0ji")])
+shiny = true
+fancy = 0.95
+name = "Malachite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

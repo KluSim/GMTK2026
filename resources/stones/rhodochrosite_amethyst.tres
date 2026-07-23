@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://47iucymhqwpy"]
+
+[ext_resource type="Texture2D" uid="uid://8l3vxfdsodl3" path="res://asssets/stones/RhodochrositeAmethyst.png" id="1_2ovt3"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_8ll3p"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_ltble"]
+
+[sub_resource type="Resource" id="Resource_c2hqg"]
+script = ExtResource("2_8ll3p")
+color = Color(0.5372549, 0.34901962, 0.46666667, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_ltble")
+image = ExtResource("1_2ovt3")
+materials = Array[ExtResource("2_8ll3p")]([SubResource("Resource_c2hqg")])
+fancy = 0.7
+surface = 1
+name = "Rhodochrosite + Amethyst"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

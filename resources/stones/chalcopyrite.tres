@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://chahsarm1mt7c"]
+
+[ext_resource type="Texture2D" uid="uid://dfofkq40kwht3" path="res://asssets/stones/Chalcopyrite.png" id="1_c7adf"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_fw7kk"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_wvlro"]
+
+[sub_resource type="Resource" id="Resource_8otk0"]
+script = ExtResource("2_fw7kk")
+color = Color(0.49411765, 0.49411765, 0.68235296, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_wvlro")
+image = ExtResource("1_c7adf")
+materials = Array[ExtResource("2_fw7kk")]([SubResource("Resource_8otk0")])
+name = "Chalcopyrite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

@@ -2,24 +2,95 @@
 
 [ext_resource type="Texture2D" uid="uid://csndcupm606a4" path="res://asssets/book.png" id="1_d31p3"]
 [ext_resource type="Script" uid="uid://cgsd0bk6rds2y" path="res://scripts/quests/quests.gd" id="2_c1bqv"]
+[ext_resource type="Texture2D" uid="uid://cbj1cocj2obhe" path="res://asssets/stones/Amethyst2.png" id="2_wrk8y"]
 [ext_resource type="FontFile" uid="uid://crlbolrudui3q" path="res://asssets/fonts/terminal-grotesque_open.otf" id="3_c1bqv"]
 [ext_resource type="Script" uid="uid://bsag8cd2wcnuq" path="res://scripts/quests/quest.gd" id="3_n5iei"]
-
-[sub_resource type="GDScript" id="GDScript_6niy1"]
-
-[sub_resource type="Resource" id="Resource_c1bqv"]
-script = ExtResource("3_n5iei")
-name = null
-description = null
-metadata/_custom_type_script = "uid://bsag8cd2wcnuq"
+[ext_resource type="Script" uid="uid://b82w6nfb8f04k" path="res://scripts/quests/quest_handler.gd" id="3_xvxj1"]
+[ext_resource type="Resource" uid="uid://bp344chp0t00v" path="res://resources/quests/beginner.tres" id="4_6niy1"]
+[ext_resource type="Texture2D" uid="uid://cqt1v1ganng4f" path="res://asssets/pickaxe_out.png" id="4_lp88n"]
 
 [node name="Quests" type="Node2D" unique_id=1979151972]
+
+[node name="Stone" type="TextureRect" parent="." unique_id=2086683941]
+visible = false
+custom_maximum_size = Vector2(20, 20)
+offset_left = 805.0
+offset_top = 96.0
+offset_right = 825.0
+offset_bottom = 116.0
+size_flags_horizontal = 3
+texture = ExtResource("2_wrk8y")
+stretch_mode = 4
+
+[node name="quest" type="PanelContainer" parent="." unique_id=2039600056]
+visible = false
+offset_left = 586.0
+offset_top = 68.0
+offset_right = 972.0
+offset_bottom = 116.0
+script = ExtResource("3_xvxj1")
+
+[node name="FoldableContainer" type="FoldableContainer" parent="quest" unique_id=1885314873]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c1bqv")
+title = "Quest"
+
+[node name="quest" type="VBoxContainer" parent="quest/FoldableContainer" unique_id=139742226]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="quest/FoldableContainer/quest" unique_id=905447322]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=999795937]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Duration_label" type="RichTextLabel" parent="quest/FoldableContainer/quest/HBoxContainer/HBoxContainer" unique_id=920567118]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("3_c1bqv")
+text = "⌛"
+fit_content = true
+scroll_active = false
+
+[node name="Duration" type="RichTextLabel" parent="quest/FoldableContainer/quest/HBoxContainer/HBoxContainer" unique_id=150882175]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_fonts/normal_font = ExtResource("3_c1bqv")
+text = "2"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=1141660808]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Button" type="Button" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=100176619]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(40, 20)
+layout_mode = 2
+size_flags_stretch_ratio = 0.1
+theme_override_fonts/font = ExtResource("3_c1bqv")
+alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="quest/FoldableContainer/quest/HBoxContainer/Button" unique_id=1299868730]
+custom_maximum_size = Vector2(18, 18)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("4_lp88n")
 
 [node name="BookOut" type="Sprite2D" parent="." unique_id=540464824]
 position = Vector2(560, 323)
 texture = ExtResource("1_d31p3")
 script = ExtResource("2_c1bqv")
-quests = Array[ExtResource("3_n5iei")]([SubResource("Resource_c1bqv")])
+quests = Array[ExtResource("3_n5iei")]([ExtResource("4_6niy1"), ExtResource("4_6niy1")])
 
 [node name="quests" type="VBoxContainer" parent="BookOut" unique_id=1869033547]
 offset_left = 26.0
@@ -33,40 +104,4 @@ offset_top = -255.0
 offset_right = -3.0
 offset_bottom = 250.0
 
-[node name="quest" type="PanelContainer" parent="." unique_id=2039600056]
-visible = false
-offset_left = 171.0
-offset_top = 75.0
-offset_right = 537.0
-offset_bottom = 115.0
-
-[node name="FoldableContainer" type="FoldableContainer" parent="quest" unique_id=1885314873]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_c1bqv")
-title = "Quest"
-
-[node name="quest" type="VBoxContainer" parent="quest/FoldableContainer" unique_id=139742226]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="quest/FoldableContainer/quest" unique_id=905447322]
-layout_mode = 2
-
-[node name="Duration_label" type="RichTextLabel" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=920567118]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.08
-theme_override_fonts/normal_font = ExtResource("3_c1bqv")
-text = "⌛"
-fit_content = true
-scroll_active = false
-
-[node name="Duration" type="RichTextLabel" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=150882175]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.68
-theme_override_fonts/normal_font = ExtResource("3_c1bqv")
-fit_content = true
-scroll_active = false
-
-[node name="Stones" type="Panel" parent="quest/FoldableContainer/quest/HBoxContainer" unique_id=597620885]
-layout_mode = 2
+[connection signal="pressed" from="quest/FoldableContainer/quest/HBoxContainer/Button" to="quest" method="_on_pressed"]

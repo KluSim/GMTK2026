@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bp344chp0t00v"]
+
+[ext_resource type="Script" uid="uid://v82mhnsn0aae" path="res://scripts/quests/reward.gd" id="1_etpiy"]
+[ext_resource type="Resource" uid="uid://1gf55riubief" path="res://resources/stones/amethyst2.tres" id="2_dnomh"]
+[ext_resource type="Resource" uid="uid://dgiap2o6ssu4t" path="res://resources/stones/gold.tres" id="3_ujb43"]
+[ext_resource type="Script" uid="uid://bsag8cd2wcnuq" path="res://scripts/quests/quest.gd" id="4_xqd1l"]
+
+[sub_resource type="Resource" id="Resource_6niy1"]
+script = ExtResource("1_etpiy")
+probability = 0.2
+reward = ExtResource("2_dnomh")
+metadata/_custom_type_script = "uid://v82mhnsn0aae"
+
+[sub_resource type="Resource" id="Resource_wrk8y"]
+script = ExtResource("1_etpiy")
+probability = 0.1
+reward = ExtResource("3_ujb43")
+metadata/_custom_type_script = "uid://v82mhnsn0aae"
+
+[resource]
+script = ExtResource("4_xqd1l")
+name = "Beginner's Quest"
+description = "Some easy rocks to find"
+duration = 2
+rewards = Array[ExtResource("1_etpiy")]([SubResource("Resource_6niy1"), SubResource("Resource_wrk8y")])
+metadata/_custom_type_script = "uid://bsag8cd2wcnuq"

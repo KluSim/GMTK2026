@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://2iq8jje250fg"]
+
+[ext_resource type="Texture2D" uid="uid://c0p64myyg0j0e" path="res://asssets/stones/Scheelite.png" id="1_ep0qa"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_vabps"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_1m254"]
+
+[sub_resource type="Resource" id="Resource_esjeo"]
+script = ExtResource("2_vabps")
+color = Color(0.4627451, 0.46666667, 0.43137255, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_1m254")
+image = ExtResource("1_ep0qa")
+materials = Array[ExtResource("2_vabps")]([SubResource("Resource_esjeo")])
+fancy = 0.3
+surface = 1
+shape = 2
+name = "Scheelite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

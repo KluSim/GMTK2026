@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://d0mb0ic41gtxd"]
+
+[ext_resource type="Texture2D" uid="uid://b4tvwsr2jpgbc" path="res://asssets/stones/CalciteIronoxide.png" id="1_jt6hk"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_jmka3"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_05pd4"]
+
+[sub_resource type="Resource" id="Resource_rreko"]
+script = ExtResource("2_jmka3")
+color = Color(0.7490196, 0.42352942, 0.24313726, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_05pd4")
+image = ExtResource("1_jt6hk")
+materials = Array[ExtResource("2_jmka3")]([SubResource("Resource_rreko")])
+fancy = 0.4
+shape = 1
+name = "Calcite + Ironoxide"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

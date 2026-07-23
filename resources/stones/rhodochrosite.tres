@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://d1j13u3ekx31v"]
+
+[ext_resource type="Texture2D" uid="uid://dfc8jysvfbtid" path="res://asssets/stones/Rhodochrosite.png" id="1_7xxc7"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_a3too"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_kipnb"]
+
+[sub_resource type="Resource" id="Resource_mhvxk"]
+script = ExtResource("2_a3too")
+color = Color(0.5764706, 0.5019608, 0.4745098, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_kipnb")
+image = ExtResource("1_7xxc7")
+materials = Array[ExtResource("2_a3too")]([SubResource("Resource_mhvxk")])
+fancy = 0.3
+surface = 1
+name = "Rhodochrosite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

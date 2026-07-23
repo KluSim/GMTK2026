@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://dxp76vttrndul"]
+
+[ext_resource type="Texture2D" uid="uid://bbjdhdoev4w00" path="res://asssets/stones/Offretite.png" id="1_yv8ah"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_5fmqd"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_0v80q"]
+
+[sub_resource type="Resource" id="Resource_80sa4"]
+script = ExtResource("2_5fmqd")
+color = Color(0.78431374, 0.8156863, 0.7647059, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_0v80q")
+image = ExtResource("1_yv8ah")
+materials = Array[ExtResource("2_5fmqd")]([SubResource("Resource_80sa4")])
+fancy = 0.8
+name = "Offretite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"
