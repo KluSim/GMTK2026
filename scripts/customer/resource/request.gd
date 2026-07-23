@@ -4,21 +4,24 @@ extends Resource
 enum Shiny{Yes, No, Both}
 enum SColor{Blue, Red, Violett, Black, Grey, Green}
 	
-@export var color: Array[SColor]
+@export var color: Array[RequestResource.SColor]
 @export var shiny: Shiny
 @export var surface: Array[StoneResource.Surface]
 @export var shape: Array[StoneResource.Shape]
+@export var message: String
 
 func _init(
-	color: Array[SColor],
-	shiny: Shiny,
-	surface: Array[StoneResource.Surface],
-	shape: Array[StoneResource.Shape]
+	_color: Array[RequestResource.SColor],
+	_shiny: Shiny,
+	_surface: Array[StoneResource.Surface],
+	_shape: Array[StoneResource.Shape],
+	_message: String
 ):
-	self.color = color
-	self.shiny = shiny
-	self.surface = surface
-	self.shape = shape
+	self.color = _color
+	self.shiny = _shiny
+	self.surface = _surface
+	self.shape = _shape
+	self.message = _message
 	
 func stone_distance(stone: StoneResource) -> float:
 	var dist: float = 0

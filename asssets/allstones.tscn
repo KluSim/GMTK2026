@@ -59,12 +59,6 @@ color = Color(0.19607843, 0.13333334, 0.34901962, 1)
 weight = 1.0
 metadata/_custom_type_script = "uid://dc2fynm1xyguu"
 
-[sub_resource type="Resource" id="Resource_4tp0c"]
-script = ExtResource("3_8hss3")
-color = Color(0.8862745, 0.67058825, 0.2, 1)
-weight = 1.0
-metadata/_custom_type_script = "uid://dc2fynm1xyguu"
-
 [sub_resource type="Resource" id="Resource_4wrk8"]
 script = ExtResource("3_8hss3")
 color = Color(0.58431375, 0.42745098, 0.36078432, 1)
@@ -86,6 +80,12 @@ metadata/_custom_type_script = "uid://dc2fynm1xyguu"
 [sub_resource type="Resource" id="Resource_wa855"]
 script = ExtResource("3_8hss3")
 color = Color(0.53333336, 0.2, 0.09019608, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://dc2fynm1xyguu"
+
+[sub_resource type="Resource" id="Resource_4tp0c"]
+script = ExtResource("3_8hss3")
+color = Color(0.8862745, 0.67058825, 0.2, 1)
 weight = 1.0
 metadata/_custom_type_script = "uid://dc2fynm1xyguu"
 
@@ -299,13 +299,6 @@ image = ExtResource("4_4wrk8")
 mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_d4pis")])
 fancyness = 0.7
 
-[node name="Baryte2" parent="." unique_id=330082798 instance=ExtResource("1_ase47")]
-position = Vector2(1076, 264)
-image = ExtResource("5_aa3h0")
-mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_4tp0c")])
-fancyness = 0.6
-shape = 2
-
 [node name="Baryte3" parent="." unique_id=54976900 instance=ExtResource("1_ase47")]
 position = Vector2(1348, 264)
 image = ExtResource("6_74uvt")
@@ -333,6 +326,13 @@ image = ExtResource("9_ljrb7")
 mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_wa855")])
 fancyness = 0.4
 shape = 1
+
+[node name="Baryte2" parent="." unique_id=330082798 instance=ExtResource("1_ase47")]
+position = Vector2(1076, 264)
+image = ExtResource("5_aa3h0")
+mats = Array[ExtResource("3_8hss3")]([SubResource("Resource_4tp0c")])
+fancyness = 0.6
+shape = 2
 
 [node name="Boulangerite" parent="." unique_id=1180673470 instance=ExtResource("1_ase47")]
 position = Vector2(2458, 260)

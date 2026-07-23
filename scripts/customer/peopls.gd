@@ -14,7 +14,7 @@ class MoneyPerson:
 		extentions_left = exts
 		payback_in_days = pay_in_days
 		
-func offer(
+static func offer(
 	stone: StoneResource, 
 	customer: CustomerResource, 
 	reputation: float
@@ -26,24 +26,34 @@ func offer(
 	var prize = stone.fancy * reputation * max(min(-0.4*dist.dist, 1),0)
 	return prize
 
-var rng = RandomNumberGenerator.new()
-func generate_customer() -> CustomerResource:
+static func generate_customer() -> CustomerResource:
+	var rng = RandomNumberGenerator.new()
+	print(RequestResource.SColor.values().pick_random() as RequestResource.SColor)
+	
+	var colors: Array[RequestResource.SColor] = []
+	for i in range(rng.randi_range(1, 2)):
+		colors.append(RequestResource.SColor.values().pick_random())
+	
+	var surfaces: Array[StoneResource.Surface] = []
+	for i in range(rng.randi_range(1, 2)):
+		surfaces.append(StoneResource.Surface.values().pick_random())
+	
+	var shapes: Array[StoneResource.Shape] = []
+	for i in range(rng.randi_range(1, 2)):
+		shapes.append(StoneResource.Shape.values().pick_random())
+	
+	
 	return CustomerResource.new(
 		rng.randf_range(0.0, 1.0),
 		rng.randf_range(0.0, 1.0),
 		RequestResource.new(
-			range(rng.randi_range(0, 2)).map(func(i): RequestResource.SColor.values().pick_random()),
-			RequestResource.Shiny.values().pick_random(),
-			range(rng.randi_range(0, 2)).map(func(i): StoneResource.Surface.values().pick_random()),
-			range(rng.randi_range(0, 2)).map(func(i): StoneResource.Shape.values().pick_random())
+			colors,
+			RequestResource.Shiny.values().pick_random() as RequestResource.Shiny,
+			surfaces,
+			shapes,
+			"Hey, nice store! One black stone please :)"
 		)
 	)
-	
-#Array[Array[Customer]], day, nr customer, customer
-var customer_schedule = [
-	range(5).map(func(i): generate_customer())
-]
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
