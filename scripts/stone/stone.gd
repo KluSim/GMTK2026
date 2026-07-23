@@ -1,21 +1,22 @@
 @tool
 extends Node2D
 
-@export var image: Texture2D:
+@export var stone: StoneResource:
 	set(value):
-		image = value
-		# Only update if the node structure is loaded
-		if is_inside_tree() and has_node("Sprite2D"):
-			$Sprite2D.texture = value
-
-@export var stone: StoneResource
+		stone = value
+		if value.image:
+			sprite.texture = value.image
 @onready var sprite = $Sprite2D
 
-func _ready() -> void:
+func set_sprite():
 	# Always set the visual texture in the editor when loading the scene
-	if sprite and image:
-		sprite.texture = image
-		
+	if sprite:
+		sprite.texture = stone.image
+	
+
+func _ready() -> void:	
+	set_sprite()
+	
 	# STOP HERE if we are just viewing this in the editor
 	if Engine.is_editor_hint():
 		return

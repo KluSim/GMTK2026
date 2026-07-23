@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://b74a24du1y0kw"]
+
+[ext_resource type="Texture2D" uid="uid://ccr6fgbdxgigx" path="res://asssets/stones/Amethyst.png" id="1_qn6u3"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_jg5na"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_cen6y"]
+
+[sub_resource type="Resource" id="Resource_esjeo"]
+script = ExtResource("2_jg5na")
+color = Color(0.59607846, 0.53333336, 0.6666667, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_cen6y")
+image = ExtResource("1_qn6u3")
+materials = Array[ExtResource("2_jg5na")]([SubResource("Resource_esjeo")])
+shiny = true
+fancy = 0.7
+surface = 2
+shape = 2
+name = "Amethyst"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

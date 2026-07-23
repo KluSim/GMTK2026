@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://c781fktkm7sfp"]
+
+[ext_resource type="Texture2D" uid="uid://cqlr6shgxpthu" path="res://asssets/stones/BaryteRealgar.png" id="1_hqh06"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_xwc5p"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_6vgwp"]
+
+[sub_resource type="Resource" id="Resource_vx8wc"]
+script = ExtResource("2_xwc5p")
+color = Color(0.57254905, 0.23529412, 0.12941177, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_6vgwp")
+image = ExtResource("1_hqh06")
+materials = Array[ExtResource("2_xwc5p")]([SubResource("Resource_vx8wc")])
+fancy = 0.3
+surface = 1
+shape = 2
+name = "Baryte + Realgar"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"
