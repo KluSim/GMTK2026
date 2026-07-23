@@ -24,9 +24,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if len(area2D.get_overlapping_bodies())==2 && !steine_Liste.is_empty() && !is_dragging && Time.get_ticks_usec() - time_delay > 200000:
+	if len(area2D.get_overlapping_bodies())==1 && !steine_Liste.is_empty() && !is_dragging && Time.get_ticks_usec() - time_delay > 200000:
+		print("spawn new stone")
 		var stein = steine_Liste.pop_front()
-		stein.scale = Vector2(0.5,0.5)
+		stein.scale = Vector2(0.3,0.3)
 		var body = $"../../../../stones/test_ball".duplicate()
 		var collision = $"../../../../stones/DefaultColission".duplicate()
 		
