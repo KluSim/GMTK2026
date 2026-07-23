@@ -5,7 +5,7 @@ var lasttime = 0
 
 @export var speed: float = 2.0
 var time: float = -1.0
-var dawn = -1
+var dawn = 0
 var days = 0
 var speed_multiplier = 1         #multiplier how fast the days go
 

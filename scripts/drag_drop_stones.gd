@@ -22,9 +22,11 @@ func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			start_drag()
+			get_child(0).z_index = 1
 			stone_spawner.is_dragging = true
 		else:
 			stop_drag()
+			get_child(0).z_index = -1
 			stone_spawner.is_dragging = false
 
 func _input(event):

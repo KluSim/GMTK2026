@@ -1,16 +1,20 @@
 @tool
 extends Node2D
 
+@onready var sprite: Sprite2D = $Sprite2D
 @export var stone: StoneResource:
 	set(value):
 		stone = value
-		if value.image and sprite:
+
+		if not is_inside_tree():
+			await ready
+		if sprite and value and value.image:
 			sprite.texture = value.image
-@onready var sprite = $Sprite2D
+
 
 func set_sprite():
 	# Always set the visual texture in the editor when loading the scene
-	if sprite:
+	if sprite and stone:
 		sprite.texture = stone.image
 	
 
