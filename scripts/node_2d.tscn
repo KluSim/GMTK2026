@@ -5,8 +5,11 @@
 [ext_resource type="Script" uid="uid://bhw5ukgtg1elf" path="res://time.gd" id="2_2upi6"]
 [ext_resource type="Texture2D" uid="uid://qmkxsysxvdfv" path="res://asssets/basekt.png" id="3_8yxic"]
 [ext_resource type="Script" uid="uid://hulfkks3ak60" path="res://scripts/spawn_stones.gd" id="3_plxss"]
+[ext_resource type="Texture2D" uid="uid://bf02553ssfjqw" path="res://asssets/spiderweb.png" id="5_8idvm"]
 [ext_resource type="Script" uid="uid://6m6lekawh24w" path="res://scripts/drag_drop_stones.gd" id="5_dlxbr"]
 [ext_resource type="Texture2D" uid="uid://bbpst1olhh5he" path="res://asssets/lamp_texture.png" id="5_phfuf"]
+[ext_resource type="Script" uid="uid://8ae7wbowjjva" path="res://scripts/graphics scripts/opacity.gd" id="6_rv1hm"]
+[ext_resource type="Texture2D" uid="uid://61jkf30104ba" path="res://asssets/öttinger_texture.png" id="7_rv1hm"]
 [ext_resource type="PackedScene" uid="uid://dx6qm1wiwii40" path="res://asssets/allstones.tscn" id="8_phfuf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
@@ -17,6 +20,9 @@ size = Vector2(1250.0009, 725)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nym43"]
 size = Vector2(24.999939, 625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvteh"]
+size = Vector2(53.158813, 170.45459)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_phfuf"]
 load_path = "res://.godot/imported/wood-texture-background-free-photo-2149788610.jpg-d2a69cea59226b767b0c5d4c7a1383ee.ctex"
@@ -35,16 +41,15 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_phfuf")
 fill = 1
 fill_from = Vector2(0.4871795, 0.34615386)
-fill_to = Vector2(0.4871795, 0.6880342)
+fill_to = Vector2(0.5, 0.84615386)
 
 [sub_resource type="Gradient" id="Gradient_plxss"]
-offsets = PackedFloat32Array(0.012048192, 0.9939759)
-colors = PackedColorArray(0.5887199, 0.722688, 0.9968627, 1, 0.9936982, 1, 0.66880405, 1)
+offsets = PackedFloat32Array(0, 0.90416664)
+colors = PackedColorArray(0.2710533, 0.20943561, 0.08973312, 1, 0.9936982, 1, 0.66880405, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hvteh"]
 gradient = SubResource("Gradient_plxss")
 use_hdr = true
-fill_to = Vector2(100, 0)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_fuano"]
 
@@ -53,8 +58,8 @@ generate_mipmaps = false
 noise = SubResource("FastNoiseLite_fuano")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6hafb"]
-radius = 32.0
-height = 82.0
+radius = 17.0
+height = 72.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6hafb"]
 rough = true
@@ -71,21 +76,26 @@ anchor_mode = 0
 [node name="leftshelf" type="Node2D" parent="visuals/shop visuals" unique_id=231686816]
 
 [node name="Shelf" parent="visuals/shop visuals/leftshelf" unique_id=518753474 instance=ExtResource("1_8yxic")]
-position = Vector2(204, 132)
+position = Vector2(214, 130)
+rotation = -0.018843994
 scale = Vector2(0.9852941, 0.9259549)
 
 [node name="Shelf2" parent="visuals/shop visuals/leftshelf" unique_id=1407536572 instance=ExtResource("1_8yxic")]
-position = Vector2(212, 514)
+position = Vector2(211.99998, 503)
+rotation = 0.024738887
 
 [node name="Shelf3" parent="visuals/shop visuals/leftshelf" unique_id=261444589 instance=ExtResource("1_8yxic")]
 position = Vector2(209, 389)
+rotation = -0.026970899
 
 [node name="Shelf4" parent="visuals/shop visuals/leftshelf" unique_id=1187441990 instance=ExtResource("1_8yxic")]
 position = Vector2(206, 260)
+rotation = 3.2114058
 
 [node name="top shelf" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1715682454]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(117.99999, -57.999992)
+position = Vector2(137, -59.999996)
+rotation = 0.0052359877
 scale = Vector2(1.1440153, 0.58887744)
 texture = ExtResource("1_ue2ak")
 
@@ -95,6 +105,8 @@ z_index = -1
 position = Vector2(138, 368.00003)
 scale = Vector2(1.1126064, 2.1655295)
 texture = ExtResource("1_ue2ak")
+flip_h = true
+flip_v = true
 
 [node name="korb" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1337986226]
 z_index = 2
@@ -133,6 +145,38 @@ shape = SubResource("RectangleShape2D_nym43")
 [node name="spawnpoint" type="Node2D" parent="visuals/shop visuals/leftshelf/korb" unique_id=715523976]
 position = Vector2(1.6666716, -162.50005)
 
+[node name="decorations" type="Node2D" parent="visuals/shop visuals/leftshelf" unique_id=1453319712]
+script = ExtResource("6_rv1hm")
+
+[node name="cobweb" type="Sprite2D" parent="visuals/shop visuals/leftshelf/decorations" unique_id=1801887554]
+light_mask = 0
+z_index = -1
+position = Vector2(332, 192)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_8idvm")
+
+[node name="cobweb2" type="Sprite2D" parent="visuals/shop visuals/leftshelf/decorations" unique_id=4579652]
+light_mask = 0
+z_index = -1
+position = Vector2(83, 414.99994)
+rotation = 0.008219689
+scale = Vector2(-0.07221636, -0.023295715)
+texture = ExtResource("5_8idvm")
+flip_v = true
+
+[node name="beer" type="Sprite2D" parent="visuals/shop visuals/leftshelf/decorations" unique_id=658965137]
+z_index = -1
+position = Vector2(381, 461.99997)
+scale = Vector2(0.6772152, 0.44)
+texture = ExtResource("7_rv1hm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/decorations/beer" unique_id=1791284095]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/decorations/beer/StaticBody2D" unique_id=730481340]
+position = Vector2(1.4766235, -5.6815186)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_hvteh")
+
 [node name="counter" type="Node2D" parent="visuals/shop visuals" unique_id=1971165239]
 
 [node name="Counter" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1497199078]
@@ -146,15 +190,17 @@ texture = SubResource("CompressedTexture2D_phfuf")
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
 z_index = 1
 position = Vector2(423.02, 327.39236)
-rotation = 1.5707964
+rotation = 1.584759
 scale = Vector2(1.2809889, 0.06417751)
+skew = -0.09773844
 texture = ExtResource("1_ue2ak")
 
 [node name="leftBeam2" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1466650742]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(9.9999695, 327)
-rotation = 1.5707964
-scale = Vector2(1.2809889, 0.06417751)
+position = Vector2(-8.000002, 328)
+rotation = 1.5289084
+scale = Vector2(1.8786057, 0.17413631)
+skew = -0.6021386
 texture = ExtResource("1_ue2ak")
 
 [node name="Shelf" parent="visuals/shop visuals/counter" unique_id=66084596 instance=ExtResource("1_8yxic")]
@@ -224,14 +270,15 @@ shape = SubResource("RectangleShape2D_8yxic")
 position = Vector2(941, 317)
 shape = SubResource("RectangleShape2D_8yxic")
 
-[node name="Sprite2D" type="Sprite2D" parent="visuals/shop visuals" unique_id=53332136]
-position = Vector2(201, 98)
-scale = Vector2(2.2016063, 2.0641108)
+[node name="light_inside" type="Sprite2D" parent="visuals/shop visuals" unique_id=53332136]
+z_index = 10
+position = Vector2(190.99998, 65)
+scale = Vector2(0.39553428, 0.3303134)
 texture = ExtResource("5_phfuf")
 
-[node name="PointLight2D" type="PointLight2D" parent="visuals/shop visuals/Sprite2D" unique_id=580143497]
-position = Vector2(0.4542122, 90.11145)
-scale = Vector2(4.7266626, 6.1618547)
+[node name="PointLight2D" type="PointLight2D" parent="visuals/shop visuals/light_inside" unique_id=580143497]
+position = Vector2(53.09253, 584.29346)
+scale = Vector2(16.085875, 28.72693)
 texture = SubResource("GradientTexture2D_fuano")
 
 [node name="outside" type="Node2D" parent="." unique_id=1693418478]
@@ -253,6 +300,7 @@ texture = SubResource("NoiseTexture2D_haftu")
 [node name="DefaultColission" type="CollisionShape2D" parent="stones" unique_id=1572453387]
 position = Vector2(-7, 0)
 rotation = 1.5707964
+scale = Vector2(1.24, 1)
 shape = SubResource("CapsuleShape2D_6hafb")
 
 [node name="test_ball" type="RigidBody2D" parent="stones" unique_id=1491297971]
@@ -262,4 +310,4 @@ physics_material_override = SubResource("PhysicsMaterial_6hafb")
 script = ExtResource("5_dlxbr")
 
 [node name="Allstones" parent="." unique_id=2138325891 instance=ExtResource("8_phfuf")]
-position = Vector2(10000, 0)
+position = Vector2(0, 10000)

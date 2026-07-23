@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://bhxuw3v5m6xya"]
+
+[ext_resource type="Texture2D" uid="uid://35ml1xre3tt8" path="res://asssets/stones/Baryte3.png" id="1_qrv2v"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_5d1ep"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_bd1dx"]
+
+[sub_resource type="Resource" id="Resource_esjeo"]
+script = ExtResource("2_5d1ep")
+color = Color(0.59607846, 0.43137255, 0.37254903, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_bd1dx")
+image = ExtResource("1_qrv2v")
+materials = Array[ExtResource("2_5d1ep")]([SubResource("Resource_esjeo")])
+fancy = 0.3
+surface = 2
+shape = 2
+name = "Baryte"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"
