@@ -3,7 +3,6 @@ extends Sprite2D
 @onready var stones = $"../../../../Allstones"
 @onready var stone_render = $"../../../../stones"
 
-const Classes = preload("res://scripts/peopls.gd")
 var steine_Liste =  []
 
 var is_dragging = false #check if the stone is currently getting dragged, only spawn afterwards

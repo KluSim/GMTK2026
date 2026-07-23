@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dr6utswk1rs5j" path="res://asssets/stonetemplate.tscn" id="1_ase47"]
 [ext_resource type="Texture2D" uid="uid://cbj1cocj2obhe" path="res://asssets/stones/Amethyst2.png" id="2_mwxo0"]
-[ext_resource type="Script" uid="uid://dc2fynm1xyguu" path="res://asssets/material.gd" id="3_8hss3"]
+[ext_resource type="Script" uid="uid://dc2fynm1xyguu" path="res://scripts/stone/stone_material.gd" id="3_8hss3"]
 [ext_resource type="Texture2D" uid="uid://ccr6fgbdxgigx" path="res://asssets/stones/Amethyst.png" id="3_mwxo0"]
 [ext_resource type="Texture2D" uid="uid://dc5le37etfkqe" path="res://asssets/stones/Azurite.png" id="4_4wrk8"]
 [ext_resource type="Texture2D" uid="uid://dl01ipvh2e3ai" path="res://asssets/stones/Baryte2.png" id="5_aa3h0"]
