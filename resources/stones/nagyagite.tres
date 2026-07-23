@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://d22uegqo6o6fo"]
+
+[ext_resource type="Texture2D" uid="uid://b1ep6eebfn0gp" path="res://asssets/stones/Nagyagite.png" id="1_kqeg5"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_gp41v"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_orp4q"]
+
+[sub_resource type="Resource" id="Resource_r2v32"]
+script = ExtResource("2_gp41v")
+color = Color(0.5294118, 0.5176471, 0.5058824, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_orp4q")
+image = ExtResource("1_kqeg5")
+materials = Array[ExtResource("2_gp41v")]([SubResource("Resource_r2v32")])
+fancy = 0.3
+surface = 1
+shape = 1
+name = "Nagyagite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

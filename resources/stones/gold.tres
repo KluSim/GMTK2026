@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://dgiap2o6ssu4t"]
+
+[ext_resource type="Texture2D" uid="uid://dmoa1msjs8b21" path="res://asssets/stones/Gold.png" id="1_uom27"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_4l8y2"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_vj54d"]
+
+[sub_resource type="Resource" id="Resource_x0x42"]
+script = ExtResource("2_4l8y2")
+color = Color(0.47843137, 0.45490196, 0.40392157, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_vj54d")
+image = ExtResource("1_uom27")
+materials = Array[ExtResource("2_4l8y2")]([SubResource("Resource_x0x42")])
+shiny = true
+fancy = 0.1
+surface = 1
+shape = 1
+name = "Gold"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://ck6yk6loijimx"]
+
+[ext_resource type="Texture2D" uid="uid://djt0758smo04q" path="res://asssets/stones/Fluorite.png" id="1_w2a56"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_u7xhd"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_i1pou"]
+
+[sub_resource type="Resource" id="Resource_8vg6g"]
+script = ExtResource("2_u7xhd")
+color = Color(0.2784314, 0.48235294, 0.4509804, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_i1pou")
+image = ExtResource("1_w2a56")
+materials = Array[ExtResource("2_u7xhd")]([SubResource("Resource_8vg6g")])
+shiny = true
+fancy = 0.9
+shape = 1
+name = "Fluorite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

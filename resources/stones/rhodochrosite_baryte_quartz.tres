@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://b20mli0yty4u7"]
+
+[ext_resource type="Texture2D" uid="uid://bl3fvgmf5rc7l" path="res://asssets/stones/RhodochrositeBaryteQuartz.png" id="1_otqw8"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_3ijiu"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_3wltw"]
+
+[sub_resource type="Resource" id="Resource_lwjxi"]
+script = ExtResource("2_3ijiu")
+color = Color(0.65882355, 0.42352942, 0.41568628, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_3wltw")
+image = ExtResource("1_otqw8")
+materials = Array[ExtResource("2_3ijiu")]([SubResource("Resource_lwjxi")])
+fancy = 0.4
+surface = 1
+shape = 2
+name = "Rhodochrosite + Baryte + Quartz"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

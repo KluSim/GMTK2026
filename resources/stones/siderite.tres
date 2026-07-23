@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://bk21d4e247vhn"]
+
+[ext_resource type="Texture2D" uid="uid://c8obrhtkf4bhq" path="res://asssets/stones/Siderite.png" id="1_qatq3"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_xflnb"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_g125b"]
+
+[sub_resource type="Resource" id="Resource_yp21y"]
+script = ExtResource("2_xflnb")
+color = Color(0.49019608, 0.44313726, 0.28235295, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_g125b")
+image = ExtResource("1_qatq3")
+materials = Array[ExtResource("2_xflnb")]([SubResource("Resource_yp21y")])
+fancy = 0.2
+surface = 1
+shape = 2
+name = "Siderite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

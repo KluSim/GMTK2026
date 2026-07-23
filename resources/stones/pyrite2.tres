@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://bqvvtm83x2vl"]
+
+[ext_resource type="Texture2D" uid="uid://cvi0v3iwea4vh" path="res://asssets/stones/Pyrite2.png" id="1_gbuvc"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_7ecb4"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_6d1nx"]
+
+[sub_resource type="Resource" id="Resource_ow2fr"]
+script = ExtResource("2_7ecb4")
+color = Color(0.39607844, 0.47058824, 0.41960785, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_6d1nx")
+image = ExtResource("1_gbuvc")
+materials = Array[ExtResource("2_7ecb4")]([SubResource("Resource_ow2fr")])
+fancy = 0.6
+name = "Pyrite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

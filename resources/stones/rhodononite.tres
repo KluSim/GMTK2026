@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://ccuycic8evnj5"]
+
+[ext_resource type="Texture2D" uid="uid://bog81kctn4d2a" path="res://asssets/stones/Rhodonite.png" id="1_n4xyd"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_f43h6"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_brpg2"]
+
+[sub_resource type="Resource" id="Resource_nk5pb"]
+script = ExtResource("2_f43h6")
+color = Color(0.8862745, 0.27450982, 0.27058825, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_brpg2")
+image = ExtResource("1_n4xyd")
+materials = Array[ExtResource("2_f43h6")]([SubResource("Resource_nk5pb")])
+shiny = true
+fancy = 1.0
+shape = 1
+name = "Rhodonite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"

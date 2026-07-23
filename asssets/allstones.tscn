@@ -4,15 +4,165 @@
 [ext_resource type="Resource" uid="uid://c781fktkm7sfp" path="res://resources/stones/baryte_realgar.tres" id="2_4wrk8"]
 [ext_resource type="Resource" uid="uid://1gf55riubief" path="res://resources/stones/amethyst2.tres" id="2_ase47"]
 [ext_resource type="Resource" uid="uid://3bb00v8k4hlb" path="res://resources/stones/baryte2.tres" id="2_dfwin"]
+[ext_resource type="Resource" uid="uid://dncrmoejpbf2r" path="res://resources/stones/variscite.tres" id="2_iklu8"]
+[ext_resource type="Resource" uid="uid://bi44vtxj2c0re" path="res://resources/stones/calcite_pyrite.tres" id="2_ljrb7"]
+[ext_resource type="Resource" uid="uid://ccuycic8evnj5" path="res://resources/stones/rhodononite.tres" id="2_vb8jl"]
+[ext_resource type="Resource" uid="uid://cr8a2pk4ee8w3" path="res://resources/stones/calcite_boulangerite.tres" id="2_wa855"]
 [ext_resource type="Resource" uid="uid://boxuxvcxk57sp" path="res://resources/stones/azurite.tres" id="3_8hss3"]
+[ext_resource type="Resource" uid="uid://d0mb0ic41gtxd" path="res://resources/stones/calcite_ironoxide.tres" id="3_64mth"]
 [ext_resource type="Resource" uid="uid://dlitsbqowll3n" path="res://resources/stones/baryte_realgar2.tres" id="3_aa3h0"]
+[ext_resource type="Resource" uid="uid://bgdyq621h2i45" path="res://resources/stones/tetradymite.tres" id="3_ayu48"]
+[ext_resource type="Resource" uid="uid://djg36fe3h8d44" path="res://resources/stones/boulder_opal.tres" id="3_lx1em"]
+[ext_resource type="Resource" uid="uid://b20mli0yty4u7" path="res://resources/stones/rhodochrosite_baryte_quartz.tres" id="3_xbh5o"]
+[ext_resource type="Resource" uid="uid://47iucymhqwpy" path="res://resources/stones/rhodochrosite_amethyst.tres" id="4_1l3ah"]
 [ext_resource type="Resource" uid="uid://s1wi6e26d1yh" path="res://resources/stones/baryte.tres" id="4_74uvt"]
+[ext_resource type="Resource" uid="uid://bk21d4e247vhn" path="res://resources/stones/siderite.tres" id="4_fs1pj"]
+[ext_resource type="Resource" uid="uid://d3w6aq12yw3bd" path="res://resources/stones/boulangerite.tres" id="4_ljrb7"]
+[ext_resource type="Resource" uid="uid://ci3khdabef0ls" path="res://resources/stones/rhodochrosite_alabandite.tres" id="5_6x4fg"]
 [ext_resource type="Resource" uid="uid://b74a24du1y0kw" path="res://resources/stones/amethyst.tres" id="5_d4pis"]
+[ext_resource type="Resource" uid="uid://2iq8jje250fg" path="res://resources/stones/scheelite.tres" id="5_w1wg0"]
 [ext_resource type="Resource" uid="uid://bhxuw3v5m6xya" path="res://resources/stones/baryte3.tres" id="5_wa855"]
+[ext_resource type="Resource" uid="uid://d1j13u3ekx31v" path="res://resources/stones/rhodochrosite.tres" id="6_iklu8"]
+[ext_resource type="Resource" uid="uid://o2hrnc5ho4d7" path="res://resources/stones/rhodochrosite2.tres" id="7_ayu48"]
+[ext_resource type="Resource" uid="uid://rol5f1m5q88h" path="res://resources/stones/quartz_chalcopyrite_galena.tres" id="8_fs1pj"]
+[ext_resource type="Resource" uid="uid://djsq0hejme524" path="res://resources/stones/pyromorphite.tres" id="9_w1wg0"]
+[ext_resource type="Resource" uid="uid://bvro6a74b02cd" path="res://resources/stones/pyrite.tres" id="10_5er8u"]
+[ext_resource type="Resource" uid="uid://bqvvtm83x2vl" path="res://resources/stones/pyrite2.tres" id="11_l3yhw"]
+[ext_resource type="Resource" uid="uid://dxp76vttrndul" path="res://resources/stones/offretite.tres" id="12_d1uqx"]
+[ext_resource type="Resource" uid="uid://d22uegqo6o6fo" path="res://resources/stones/nagyagite.tres" id="13_imokk"]
+[ext_resource type="Resource" uid="uid://dt1or0eojqgvy" path="res://resources/stones/malachite.tres" id="14_dtkai"]
+[ext_resource type="Resource" uid="uid://byev1k0cnheb" path="res://resources/stones/hematite.tres" id="15_esjeo"]
+[ext_resource type="Resource" uid="uid://dgiap2o6ssu4t" path="res://resources/stones/gold.tres" id="16_2l5rc"]
+[ext_resource type="Resource" uid="uid://ck6yk6loijimx" path="res://resources/stones/fluorite.tres" id="17_tdhii"]
+[ext_resource type="Resource" uid="uid://b36li1umffsu4" path="res://resources/stones/dolomite_calcite_quartz.tres" id="18_2uriv"]
+[ext_resource type="Resource" uid="uid://cp01by2moihfe" path="res://resources/stones/dolomite.tres" id="19_8anc6"]
+[ext_resource type="Resource" uid="uid://b6buj1brenrfe" path="res://resources/stones/copper_silver.tres" id="20_rfnwg"]
+[ext_resource type="Resource" uid="uid://chahsarm1mt7c" path="res://resources/stones/chalcopyrite.tres" id="21_m3bb7"]
+[ext_resource type="Resource" uid="uid://bbx3mmcotuqyv" path="res://resources/stones/calcite_septaria.tres" id="22_tgmwd"]
 
 [node name="Allstones" type="Node2D" unique_id=2138325891]
 
-[node name="BaryteRealgar" parent="." unique_id=2130042310 instance=ExtResource("1_ase47")]
+[node name="Variscite" parent="." unique_id=2130042310 instance=ExtResource("1_ase47")]
+position = Vector2(1582, 1203)
+stone = ExtResource("2_iklu8")
+
+[node name="Tetradymite" parent="." unique_id=1810409167 instance=ExtResource("1_ase47")]
+position = Vector2(1308, 1184)
+stone = ExtResource("3_ayu48")
+
+[node name="Siderite" parent="." unique_id=1925704683 instance=ExtResource("1_ase47")]
+position = Vector2(975, 1199)
+stone = ExtResource("4_fs1pj")
+
+[node name="Scheelite" parent="." unique_id=806789488 instance=ExtResource("1_ase47")]
+position = Vector2(735, 1179)
+stone = ExtResource("5_w1wg0")
+
+[node name="Rhodonite" parent="." unique_id=1685658911 instance=ExtResource("1_ase47")]
+position = Vector2(513, 1181)
+stone = ExtResource("2_vb8jl")
+
+[node name="RhodochrositeBaryteQuartz" parent="." unique_id=188173015 instance=ExtResource("1_ase47")]
+position = Vector2(220, 1182)
+stone = ExtResource("3_xbh5o")
+
+[node name="RhodochrositeAmethyst" parent="." unique_id=832835390 instance=ExtResource("1_ase47")]
+position = Vector2(2890, 871)
+stone = ExtResource("4_1l3ah")
+
+[node name="RhodochrositeAlabandite" parent="." unique_id=188803693 instance=ExtResource("1_ase47")]
+position = Vector2(2558, 894)
+stone = ExtResource("5_6x4fg")
+
+[node name="Rhodochrosite" parent="." unique_id=548234230 instance=ExtResource("1_ase47")]
+position = Vector2(2250, 883)
+stone = ExtResource("6_iklu8")
+
+[node name="Rhodochrosite2" parent="." unique_id=660367545 instance=ExtResource("1_ase47")]
+position = Vector2(1972, 894)
+stone = ExtResource("7_ayu48")
+
+[node name="QuartzChalcopyriteGalena" parent="." unique_id=98721524 instance=ExtResource("1_ase47")]
+position = Vector2(1717, 886)
+stone = ExtResource("8_fs1pj")
+
+[node name="Pyromorphite" parent="." unique_id=324730387 instance=ExtResource("1_ase47")]
+position = Vector2(1415, 908)
+stone = ExtResource("9_w1wg0")
+
+[node name="Pyrite" parent="." unique_id=840033651 instance=ExtResource("1_ase47")]
+position = Vector2(1166, 907)
+stone = ExtResource("10_5er8u")
+
+[node name="Pyrite2" parent="." unique_id=2064662497 instance=ExtResource("1_ase47")]
+position = Vector2(936, 913)
+stone = ExtResource("11_l3yhw")
+
+[node name="Offretite" parent="." unique_id=1698147182 instance=ExtResource("1_ase47")]
+position = Vector2(725, 887)
+stone = ExtResource("12_d1uqx")
+
+[node name="Nagygite" parent="." unique_id=884225040 instance=ExtResource("1_ase47")]
+position = Vector2(488, 874)
+stone = ExtResource("13_imokk")
+
+[node name="Malachite" parent="." unique_id=1711450373 instance=ExtResource("1_ase47")]
+position = Vector2(222, 904)
+stone = ExtResource("14_dtkai")
+
+[node name="Hematite" parent="." unique_id=298884884 instance=ExtResource("1_ase47")]
+position = Vector2(2787, 513)
+stone = ExtResource("15_esjeo")
+
+[node name="Gold" parent="." unique_id=1202151096 instance=ExtResource("1_ase47")]
+position = Vector2(2514, 538)
+stone = ExtResource("16_2l5rc")
+
+[node name="Fluorite" parent="." unique_id=498686210 instance=ExtResource("1_ase47")]
+position = Vector2(2227, 528)
+stone = ExtResource("17_tdhii")
+
+[node name="DolomiteCalciteQuartz" parent="." unique_id=371442497 instance=ExtResource("1_ase47")]
+position = Vector2(1972, 562)
+stone = ExtResource("18_2uriv")
+
+[node name="Dolomite" parent="." unique_id=1890528843 instance=ExtResource("1_ase47")]
+position = Vector2(1699, 550)
+stone = ExtResource("19_8anc6")
+
+[node name="CopperSilver" parent="." unique_id=115508426 instance=ExtResource("1_ase47")]
+position = Vector2(1457, 577)
+stone = ExtResource("20_rfnwg")
+
+[node name="Chalcopyrite" parent="." unique_id=1901262589 instance=ExtResource("1_ase47")]
+position = Vector2(1204, 564)
+stone = ExtResource("21_m3bb7")
+
+[node name="CalciteSeptaria" parent="." unique_id=661028535 instance=ExtResource("1_ase47")]
+position = Vector2(958, 576)
+stone = ExtResource("22_tgmwd")
+
+[node name="CalcitePyrite" parent="." unique_id=1550131473 instance=ExtResource("1_ase47")]
+position = Vector2(725, 552)
+stone = ExtResource("2_ljrb7")
+
+[node name="CalciteIronoxide" parent="." unique_id=1352563797 instance=ExtResource("1_ase47")]
+position = Vector2(452, 588)
+stone = ExtResource("3_64mth")
+
+[node name="CalciteBoulangerite" parent="." unique_id=1252705839 instance=ExtResource("1_ase47")]
+position = Vector2(211, 565)
+stone = ExtResource("2_wa855")
+
+[node name="BoulderOpal" parent="." unique_id=846229544 instance=ExtResource("1_ase47")]
+position = Vector2(2747, 268)
+stone = ExtResource("3_lx1em")
+
+[node name="Boulangerite" parent="." unique_id=1723474502 instance=ExtResource("1_ase47")]
+position = Vector2(2479, 275)
+stone = ExtResource("4_ljrb7")
+
+[node name="BaryteRealgar" parent="." unique_id=391918873 instance=ExtResource("1_ase47")]
 position = Vector2(2237, 295)
 stone = ExtResource("2_4wrk8")
 

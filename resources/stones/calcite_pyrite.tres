@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StoneResource" format=3 uid="uid://bi44vtxj2c0re"]
+
+[ext_resource type="Texture2D" uid="uid://ch3ro3cq7j8d2" path="res://asssets/stones/CalcitePyrite.png" id="1_puvkg"]
+[ext_resource type="Script" uid="uid://bc1jil0eaa6pd" path="res://scripts/stone/resource/material.gd" id="2_5t4lx"]
+[ext_resource type="Script" uid="uid://diwgy4big8r7q" path="res://scripts/stone/resource/stone.gd" id="3_a8s4b"]
+
+[sub_resource type="Resource" id="Resource_3ikg6"]
+script = ExtResource("2_5t4lx")
+color = Color(0.8235294, 0.7921569, 0.81960785, 1)
+weight = 1.0
+metadata/_custom_type_script = "uid://bc1jil0eaa6pd"
+
+[resource]
+script = ExtResource("3_a8s4b")
+image = ExtResource("1_puvkg")
+materials = Array[ExtResource("2_5t4lx")]([SubResource("Resource_3ikg6")])
+fancy = 0.4
+surface = 2
+shape = 2
+name = "Calcite + Pyrite"
+metadata/_custom_type_script = "uid://diwgy4big8r7q"
