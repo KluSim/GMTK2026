@@ -2,13 +2,18 @@ extends RigidBody2D
 
 var is_dragging = false
 var click_offset = Vector2.ZERO
+var stone_spawner
+
 
 func _ready():
 	# Allow mouse inputs to propagate to this physics object
 	input_pickable = true
+	stone_spawner = $"../../visuals/shop visuals/leftshelf/korb"
 
 func _physics_process(_delta):
 	if is_dragging:
+		print("start dragging")
+		
 		# Smoothly move the object to the mouse pointer minus where you initially clicked it
 		global_position = get_global_mouse_position() - click_offset
 
@@ -17,8 +22,10 @@ func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			start_drag()
+			stone_spawner.is_dragging = true
 		else:
 			stop_drag()
+			stone_spawner.is_dragging = false
 
 func _input(event):
 	# Handles dropping the object if the mouse release happens outside the collision shape

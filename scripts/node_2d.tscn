@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://bhw5ukgtg1elf" path="res://time.gd" id="2_2upi6"]
 [ext_resource type="Texture2D" uid="uid://bmhlt3idngvoj" path="res://asssets/basket.png" id="2_plxss"]
 [ext_resource type="Script" uid="uid://hulfkks3ak60" path="res://scripts/spawn_stones.gd" id="3_plxss"]
-[ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="5_4i1vo"]
 [ext_resource type="Script" uid="uid://6m6lekawh24w" path="res://scripts/drag_drop_stones.gd" id="5_dlxbr"]
+[ext_resource type="PackedScene" uid="uid://dx6qm1wiwii40" path="res://asssets/allstones.tscn" id="8_phfuf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
 radius = 608.08
@@ -16,6 +16,9 @@ load_path = "res://.godot/imported/wood-texture-background-free-photo-2149788610
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haftu"]
 size = Vector2(3416.5, 2977)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yxic"]
+size = Vector2(20.375, 640.75)
 
 [sub_resource type="Gradient" id="Gradient_plxss"]
 offsets = PackedFloat32Array(0.012048192, 0.9939759)
@@ -32,10 +35,14 @@ fill_to = Vector2(100, 0)
 generate_mipmaps = false
 noise = SubResource("FastNoiseLite_fuano")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fuano"]
-radius = 47.095646
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6hafb"]
+radius = 32.0
+height = 82.0
 
-[node name="Node2D" type="Node2D" unique_id=2052885503]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6hafb"]
+rough = true
+
+[node name="Main_scene" type="Node2D" unique_id=2052885503]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2123865021]
 anchor_mode = 0
@@ -72,28 +79,33 @@ position = Vector2(138, 368.00003)
 scale = Vector2(1.1126064, 2.1655295)
 texture = ExtResource("1_ue2ak")
 
-[node name="Sprite2D" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1337986226]
-position = Vector2(90, 644)
+[node name="korb" type="Sprite2D" parent="visuals/shop visuals/leftshelf" unique_id=1337986226]
+position = Vector2(127, 640)
 scale = Vector2(0.10766129, 0.08990877)
 texture = ExtResource("2_plxss")
 script = ExtResource("3_plxss")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="visuals/shop visuals/leftshelf/Sprite2D" unique_id=681415351]
-polygon = PackedVector2Array(-701.2734, -22.245605, -812.7341, -556.1201, -942.7715, -578.36475, -859.176, 33.36621, -654.8314, 122.345215, 97.528076, 111.223145, 339.02625, -55.612793, 431.91016, -622.8545, 283.2959, -667.34424, 199.70038, -155.71436, -125.39325, 22.243652)
-
-[node name="Area2D" type="Area2D" parent="visuals/shop visuals/leftshelf/Sprite2D" unique_id=482560344]
+[node name="Area2D" type="Area2D" parent="visuals/shop visuals/leftshelf/korb" unique_id=482560344]
 position = Vector2(-789.51306, -711.8325)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/Sprite2D/Area2D" unique_id=767294010]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/leftshelf/korb/Area2D" unique_id=767294010]
 position = Vector2(548.01495, 333.6714)
 shape = SubResource("CircleShape2D_hvteh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="visuals/shop visuals/leftshelf/korb" unique_id=1013562214]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="visuals/shop visuals/leftshelf/korb/StaticBody2D" unique_id=681415351]
+polygon = PackedVector2Array(-701.2734, -22.245605, -812.7341, -556.1201, -942.7715, -578.36475, -859.176, 33.36621, -654.8314, 122.345215, 97.528076, 111.223145, 339.02625, -55.612793, 431.91016, -622.8545, 283.2959, -667.34424, 199.70038, -155.71436, -125.39325, 22.243652)
+
+[node name="spawnpoint" type="Node2D" parent="visuals/shop visuals/leftshelf/korb" unique_id=715523976]
+position = Vector2(-269.36328, -511.62973)
 
 [node name="counter" type="Node2D" parent="visuals/shop visuals" unique_id=1971165239]
 
 [node name="Counter" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1497199078]
 modulate = Color(0.19793725, 0.19793725, 0.19793719, 1)
 z_index = -2
-position = Vector2(683.5, 584)
+position = Vector2(702, 585)
 scale = Vector2(1.0136719, 0.43401748)
 texture = SubResource("CompressedTexture2D_phfuf")
 
@@ -167,6 +179,18 @@ shape = SubResource("RectangleShape2D_haftu")
 position = Vector2(2869, 327)
 shape = SubResource("RectangleShape2D_haftu")
 
+[node name="Area2D5" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=918766775]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D5" unique_id=49222987]
+position = Vector2(420.8125, 328.375)
+shape = SubResource("RectangleShape2D_8yxic")
+
+[node name="Area2D6" type="StaticBody2D" parent="visuals/shop visuals/edges" unique_id=878362280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D6" unique_id=607125475]
+position = Vector2(941, 317)
+shape = SubResource("RectangleShape2D_8yxic")
+
 [node name="outside" type="Node2D" parent="." unique_id=1693418478]
 script = ExtResource("2_2upi6")
 
@@ -181,13 +205,18 @@ visible = false
 position = Vector2(684, 278)
 texture = SubResource("NoiseTexture2D_haftu")
 
-[node name="test_ball" type="RigidBody2D" parent="." unique_id=1491297971]
+[node name="stones" type="Node2D" parent="." unique_id=264070007]
+
+[node name="DefaultColission" type="CollisionShape2D" parent="stones" unique_id=1572453387]
+position = Vector2(-7, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6hafb")
+
+[node name="test_ball" type="RigidBody2D" parent="stones" unique_id=1491297971]
 position = Vector2(675, 395)
 input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_6hafb")
 script = ExtResource("5_dlxbr")
 
-[node name="Sprite2D" type="Sprite2D" parent="test_ball" unique_id=1326390200]
-texture = ExtResource("5_4i1vo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test_ball" unique_id=1572453387]
-shape = SubResource("CircleShape2D_fuano")
+[node name="Allstones" parent="." unique_id=2138325891 instance=ExtResource("8_phfuf")]
+position = Vector2(10000, 0)

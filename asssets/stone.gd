@@ -29,7 +29,7 @@ func _ready() -> void:
 	# STOP HERE if we are just viewing this in the editor
 	if Engine.is_editor_hint():
 		return 
-	var color_dict = {}
+	var color_dict = {} as Dictionary[Color, float]
 
 	for i in mats.size():
 		color_dict[mats[i].color] = mats[i].weight

@@ -29,8 +29,8 @@ func _process(delta: float) -> void:
 	if $Path2D/PathFollow2D.progress_ratio >= 0.5:
 		state = "HERE"
 		spawn_speech()
-
-func _input(event: InputEvent) -> void:
+		
+	#func _input(event: InputEvent) -> void:
 	#if event.as_text() == "SPACE":
 	#	give_stone(Classes.StoneProps.new(Color(), ))
 	

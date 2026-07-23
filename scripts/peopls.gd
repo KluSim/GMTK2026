@@ -22,7 +22,7 @@ class StoneProps:
 	var fancyness: float
 	
 	func _init(col, glit, sh, fancy):
-		color = col
+		color = (col as Dictionary[Color, float])
 		glitzern = glit
 		shape = sh
 		fancyness = fancy
