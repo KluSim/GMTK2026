@@ -23,10 +23,12 @@ position = Vector2(325, 16)
 rotation = -3.0729506
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1317230499]
+z_index = -4
 rotation = 3.0729506
 texture = ExtResource("2_6vuag")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1598657220]
+z_index = -2
 offset_left = -229.0
 offset_top = 94.0
 offset_right = 200.0

@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://fb5b512qtipj" path="res://asssets/vault.png" id="8_alj4n"]
 [ext_resource type="PackedScene" uid="uid://dx6qm1wiwii40" path="res://asssets/allstones.tscn" id="8_phfuf"]
 [ext_resource type="Texture2D" uid="uid://bte7q8aa6food" path="res://asssets/books_texture.png" id="9_8f4uj"]
+[ext_resource type="Texture2D" uid="uid://dsk5n8msx2i3i" path="res://asssets/monitor_texture.png" id="10_3l2v0"]
+[ext_resource type="PackedScene" uid="uid://c3nd1y8i0e6pb" path="res://scripts/customer/customer.tscn" id="15_knm5q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
 radius = 608.08
@@ -183,9 +185,9 @@ shape = SubResource("RectangleShape2D_hvteh")
 
 [node name="Counter" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1497199078]
 modulate = Color(0.19793725, 0.19793725, 0.19793719, 1)
-z_index = -2
-position = Vector2(682, 589.00006)
-scale = Vector2(1.0136719, 0.43401748)
+z_index = -6
+position = Vector2(684.00006, 532)
+scale = Vector2(1.0136719, 0.733138)
 texture = SubResource("CompressedTexture2D_phfuf")
 
 [node name="leftBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1803645708]
@@ -206,7 +208,8 @@ skew = -0.6021386
 texture = ExtResource("1_ue2ak")
 
 [node name="Shelf" parent="visuals/shop visuals/counter" unique_id=66084596 instance=ExtResource("1_8yxic")]
-position = Vector2(672, 518)
+position = Vector2(679.00006, 407)
+rotation = -0.015707964
 scale = Vector2(1.25, 1)
 
 [node name="rightBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=871563762]
@@ -248,6 +251,11 @@ position = Vector2(1002, 353.00003)
 scale = Vector2(0.4274195, 0.4697581)
 texture = ExtResource("9_8f4uj")
 flip_h = true
+
+[node name="TV" type="Sprite2D" parent="visuals/shop visuals/rightshelf" unique_id=1753836398]
+position = Vector2(1040.5, 71.75)
+scale = Vector2(0.72983897, 0.7802548)
+texture = ExtResource("10_3l2v0")
 
 [node name="edges" type="Node2D" parent="visuals/shop visuals" unique_id=2052065939]
 
@@ -304,7 +312,7 @@ texture = SubResource("GradientTexture2D_fuano")
 script = ExtResource("2_2upi6")
 
 [node name="sky" type="Sprite2D" parent="outside" unique_id=1536825513]
-z_index = -5
+z_index = -100
 position = Vector2(694.00006, 253)
 scale = Vector2(8.390625, 7.9375)
 texture = SubResource("GradientTexture2D_hvteh")
@@ -330,3 +338,7 @@ script = ExtResource("5_dlxbr")
 
 [node name="Allstones" parent="." unique_id=2138325891 instance=ExtResource("8_phfuf")]
 position = Vector2(0, 10000)
+
+[node name="Customer" parent="." unique_id=315203196 instance=ExtResource("15_knm5q")]
+z_index = -4
+position = Vector2(699, 333)
