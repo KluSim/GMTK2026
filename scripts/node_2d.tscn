@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bbpst1olhh5he" path="res://asssets/lamp_texture.png" id="5_phfuf"]
 [ext_resource type="Script" uid="uid://8ae7wbowjjva" path="res://scripts/graphics scripts/opacity.gd" id="6_rv1hm"]
 [ext_resource type="Texture2D" uid="uid://61jkf30104ba" path="res://asssets/öttinger_texture.png" id="7_rv1hm"]
+[ext_resource type="Texture2D" uid="uid://fb5b512qtipj" path="res://asssets/vault.png" id="8_alj4n"]
 [ext_resource type="PackedScene" uid="uid://dx6qm1wiwii40" path="res://asssets/allstones.tscn" id="8_phfuf"]
+[ext_resource type="Texture2D" uid="uid://bte7q8aa6food" path="res://asssets/books_texture.png" id="9_8f4uj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
 radius = 608.08
@@ -182,7 +184,7 @@ shape = SubResource("RectangleShape2D_hvteh")
 [node name="Counter" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1497199078]
 modulate = Color(0.19793725, 0.19793725, 0.19793719, 1)
 z_index = -2
-position = Vector2(702, 585)
+position = Vector2(682, 589.00006)
 scale = Vector2(1.0136719, 0.43401748)
 texture = SubResource("CompressedTexture2D_phfuf")
 
@@ -210,25 +212,42 @@ scale = Vector2(1.25, 1)
 [node name="rightBeam" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=871563762]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
 position = Vector2(935, 320)
-rotation = 1.5707964
+rotation = 1.5742869
 scale = Vector2(1.2809889, 0.06417751)
 texture = ExtResource("1_ue2ak")
 
 [node name="rightBeam2" type="Sprite2D" parent="visuals/shop visuals/counter" unique_id=1606253565]
 modulate = Color(0.4351923, 0.43519226, 0.43519226, 1)
-position = Vector2(1150, 316.99997)
-rotation = 1.5707964
-scale = Vector2(1.2809889, 0.06417751)
+position = Vector2(1159.5358, 316.66696)
+rotation = 1.5358897
+scale = Vector2(1.2809889, 0.12013985)
 texture = ExtResource("1_ue2ak")
 
 [node name="rightshelf" type="Node2D" parent="visuals/shop visuals" unique_id=635050520]
 
 [node name="back_shelf" type="Sprite2D" parent="visuals/shop visuals/rightshelf" unique_id=900233577]
 modulate = Color(0.17283267, 0.17283267, 0.17283261, 1)
-z_index = -1
+z_index = -3
 position = Vector2(1057, 320)
 scale = Vector2(0.4609377, 1.9472141)
 texture = ExtResource("1_ue2ak")
+
+[node name="Shelf" parent="visuals/shop visuals/rightshelf" unique_id=1270351774 instance=ExtResource("1_8yxic")]
+position = Vector2(1141.0001, 407.99997)
+rotation = -0.018843994
+scale = Vector2(0.9852941, 0.9259549)
+
+[node name="vault" type="Sprite2D" parent="visuals/shop visuals/rightshelf" unique_id=1617187978]
+z_index = -2
+position = Vector2(1046, 537)
+texture = ExtResource("8_alj4n")
+
+[node name="books" type="Sprite2D" parent="visuals/shop visuals/rightshelf" unique_id=37156136]
+z_index = -1
+position = Vector2(1002, 353.00003)
+scale = Vector2(0.4274195, 0.4697581)
+texture = ExtResource("9_8f4uj")
+flip_h = true
 
 [node name="edges" type="Node2D" parent="visuals/shop visuals" unique_id=2052065939]
 
@@ -285,7 +304,7 @@ texture = SubResource("GradientTexture2D_fuano")
 script = ExtResource("2_2upi6")
 
 [node name="sky" type="Sprite2D" parent="outside" unique_id=1536825513]
-z_index = -2
+z_index = -5
 position = Vector2(694.00006, 253)
 scale = Vector2(8.390625, 7.9375)
 texture = SubResource("GradientTexture2D_hvteh")
