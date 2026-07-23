@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://qmkxsysxvdfv" path="res://asssets/basekt.png" id="3_8yxic"]
 [ext_resource type="Script" uid="uid://hulfkks3ak60" path="res://scripts/spawn_stones.gd" id="3_plxss"]
 [ext_resource type="Script" uid="uid://6m6lekawh24w" path="res://scripts/drag_drop_stones.gd" id="5_dlxbr"]
+[ext_resource type="Texture2D" uid="uid://bbpst1olhh5he" path="res://asssets/lamp_texture.png" id="5_phfuf"]
 [ext_resource type="PackedScene" uid="uid://dx6qm1wiwii40" path="res://asssets/allstones.tscn" id="8_phfuf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hvteh"]
@@ -25,6 +26,16 @@ size = Vector2(3416.5, 2977)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yxic"]
 size = Vector2(20.375, 640.75)
+
+[sub_resource type="Gradient" id="Gradient_phfuf"]
+offsets = PackedFloat32Array(0.36571428, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fuano"]
+gradient = SubResource("Gradient_phfuf")
+fill = 1
+fill_from = Vector2(0.4871795, 0.34615386)
+fill_to = Vector2(0.4871795, 0.6880342)
 
 [sub_resource type="Gradient" id="Gradient_plxss"]
 offsets = PackedFloat32Array(0.012048192, 0.9939759)
@@ -212,6 +223,16 @@ shape = SubResource("RectangleShape2D_8yxic")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="visuals/shop visuals/edges/Area2D6" unique_id=607125475]
 position = Vector2(941, 317)
 shape = SubResource("RectangleShape2D_8yxic")
+
+[node name="Sprite2D" type="Sprite2D" parent="visuals/shop visuals" unique_id=53332136]
+position = Vector2(201, 98)
+scale = Vector2(2.2016063, 2.0641108)
+texture = ExtResource("5_phfuf")
+
+[node name="PointLight2D" type="PointLight2D" parent="visuals/shop visuals/Sprite2D" unique_id=580143497]
+position = Vector2(0.4542122, 90.11145)
+scale = Vector2(4.7266626, 6.1618547)
+texture = SubResource("GradientTexture2D_fuano")
 
 [node name="outside" type="Node2D" parent="." unique_id=1693418478]
 script = ExtResource("2_2upi6")

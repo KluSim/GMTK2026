@@ -1,6 +1,6 @@
 extends Sprite2D
 @onready var area2D = $Area2D
-@onready var stones = $"../../../../Allstones"
+#@onready var stones = $"../../../../Allstones"
 @onready var stone_render = $"../../../../stones"
 
 var steine_Liste =  []
@@ -11,11 +11,11 @@ var time_delay = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	time_delay = Time.get_ticks_usec()
-	steine_Liste.append(stones.get_child(0).duplicate())
-	steine_Liste.append(stones.get_child(1).duplicate())
-	steine_Liste.append(stones.get_child(2).duplicate())
-	steine_Liste.append(stones.get_child(3).duplicate())
-	steine_Liste.append(stones.get_child(4).duplicate())
+	#steine_Liste.append(stones.get_child(0).duplicate())
+	#steine_Liste.append(stones.get_child(1).duplicate())
+	#steine_Liste.append(stones.get_child(2).duplicate())
+	#steine_Liste.append(stones.get_child(3).duplicate())
+	#steine_Liste.append(stones.get_child(4).duplicate())
 	print(steine_Liste)
 	pass # Replace with function body.
 
